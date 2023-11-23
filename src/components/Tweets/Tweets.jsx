@@ -1,4 +1,4 @@
-import Tweet from './Tweet';
+import Tweet from '../Tweet';
 import { FaTwitter } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 

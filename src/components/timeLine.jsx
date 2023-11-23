@@ -1,7 +1,8 @@
 import React from 'react';
-import Header from './header';
-import TweetEditor from './TweetEditor';
-import Tweets from './Tweets';
+import Header from '../components/header/header'
+import TweetEditor from './tweet_editor/TweetEditor';
+
+import Tweets from './Tweets/Tweets';
 
 function Timeline() {
   return (
