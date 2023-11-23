@@ -1,9 +1,21 @@
 
-// import { MdOutlinePhotoLibrary } from "react-icons/md";
-import { MdGifBox } from "react-icons/md";
-import { FaBarsStaggered } from "react-icons/fa6";
-import { MdOutlineEmojiEmotions } from "react-icons/md";
-import { LuCalendarClock } from "react-icons/lu";
+function handleClick() {
+  //  logique de gestion de clic ici
+  alert("Vous avez cliqué sur le bouton !");
+
+  return(
+
+<div>
+     <button id="monBouton" >
+       Cliquez ici
+     </button>
+   </div>
+   
+ );
+}
+
+
+
 
 export default function TweetEditorButtons() {
     return (
@@ -17,17 +29,20 @@ function TweetEditorActions() {
     return (
 
         <div className="tweet-editor-actions">
-           <MdGifBox />
-           <FaBarsStaggered />
-           <MdOutlineEmojiEmotions />
-           <LuCalendarClock />
-          
-          
+
+            <img  src="src\images\Media.svg" alt="" />
+            <img src="src\images\Gif.svg" alt="" />
+            <img src="src\images\Poll.svg" alt="" />
+            <img src="src\images\Group.svg" alt="" />
+            <img src="src\images\Schedule (1).svg" alt="" />
+
+
         </div>
     );
 }
 function Button() {
     return (
-        <button className="button">Poster</button>
+        <button id = "monBouton" className="button" onClick={handleClick}>Tweet</button> 
+        
     );
 }
