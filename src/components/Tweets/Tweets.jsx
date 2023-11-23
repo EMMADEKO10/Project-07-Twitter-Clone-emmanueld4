@@ -39,7 +39,7 @@ const tweets = [
     id: 4,
     content: 'hello literally everyone',
     tweetTitle: 'Twitter',
-    tweetTitleDetails: <div className='tweet-title-details'>@Twitter . Oct 29</div>,
+    tweetTitleDetails: <div className='tweet-title-details'>@Twitter . Oct 4</div>,
     tweetAvatar: <img src='src/images/logo-rond-twitter-1536x1536.png ' alt="" />,
     commentaires: '118.7K',
     retweet: '785.4K',
@@ -50,12 +50,14 @@ const tweets = [
     id: 5,
     content: 'hello literally everyone',
     tweetTitle: 'Twitter',
+    tweetImage: 'src/images/tweet-image.png',
     tweetAvatar: <img src='src/images/logo-rond-twitter-1536x1536.png ' alt="" />,
-    tweetTitleDetails: <div className='tweet-title-details'>@Twitter . Oct 29</div>,
+    tweetTitleDetails: <div className='tweet-title-details'>@Twitter . Oct 4</div>,
     retweet: '385.4K',
     like: '1.3M',
     commentaires: '465.3K',
-  }
+  },
+    
 ];
 
 const Tweets = () => {
