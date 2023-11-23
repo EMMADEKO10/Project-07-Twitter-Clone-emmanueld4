@@ -1,6 +1,4 @@
-import Tweet from '../Tweet';
-import { FaTwitter } from "react-icons/fa";
-import { AiFillTwitterCircle } from "react-icons/ai";
+import Tweet from './Tweet';
 
 const tweets = [
   {
@@ -17,7 +15,7 @@ const tweets = [
     id: 2,
     content: 'Gardening boomed during the pandemic. Six Black writers share how has helped them re-establish, and reimagine, a connection to cultivation and the land',
     tweetTitle: 'The new York time',
-    tweetImage: <img src='src/images/tweet-image.png' alt="" />,
+    tweetImage: 'src/images/tweet-image.png',
     tweetTitleDetails: <div className='tweet-title-details'>@nytimes . 2h</div>,
     tweetAvatar: <img src='src\images\Profile-Photo-new-york.png' alt="" />,
     commentaires: '19',

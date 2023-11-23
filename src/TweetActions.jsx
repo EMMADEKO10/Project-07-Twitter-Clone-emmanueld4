@@ -13,7 +13,7 @@ export default function TweetActions(){
 function TweetAction(){
     return(
         <div className="tweet-action">
-            B
+            
         </div>
     )
 }
