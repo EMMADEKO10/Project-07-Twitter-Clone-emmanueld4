@@ -1,7 +1,5 @@
 import TweetTitle from "./tweet-title"
 import TweetText from './tweet-Text'
-// import TweetImage from "./tweet-image"
-
 
 export default function TweetBody({ tweet }) {
     return (
