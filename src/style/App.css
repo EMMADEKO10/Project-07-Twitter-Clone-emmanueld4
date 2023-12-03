@@ -152,8 +152,8 @@ body{
     font-size: 1rem;
 }
 
-.tweet-title img{
-    width: 1.2rem;
+.tweet-title svg{
+    width: 1.5rem;
     height: auto;
 }
 .tweet-title-author{
