@@ -1,13 +1,12 @@
-import TweetBody from "./TweetBody"
-import TweetActions from "./TweetActions"
+import TweetBody from "./tweetBody/TweetBody"
+import TweetActions from "./tweet-action/TweetActions"
 
-export default function TweetContent() {
+
+export default function TweetContent({ tweet }) {
     return (
-    <div className="tweet-content"> 
-        <TweetBody />
-        <TweetActions />
+        <div className="tweet-content">
+            <TweetBody tweet={tweet} />
+            <TweetActions tweet={tweet} />
         </div>
-   )
+    )
 }
-
-

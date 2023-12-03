@@ -20,10 +20,10 @@ function TopTweets() {
 export default function Header() {
   return (
 
-    <div className="header">
+    <header className="header">
       <PageTitle />
       <TopTweets />
-    </div>
+    </header>
   );
   
 }
