@@ -9,10 +9,6 @@ function Avatar() {
     );
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 export default function TweetEditor() {
   return (
     <div className="tweet-editor">
@@ -22,10 +18,7 @@ export default function TweetEditor() {
   );
 }
 
-<<<<<<< HEAD
-// export default TweetEditor;
-=======
->>>>>>> main
+
 
 
 
