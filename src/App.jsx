@@ -1,7 +1,7 @@
 import Home from "./pages/home.jsx";
 import Layout from "./components/layout.jsx";
 
-const a; 
+
 
 
 import('./style/reset.css');
