@@ -15,6 +15,7 @@ export default function TweetActions({ tweet }) {
 
   const incrementCommentaire = () => {
     setCommentaires(dataTweetAction.commentaire + 1)
+    // {console.log("La valeur de dataTweetAction.commentaire",dataTweetAction.commentaire + 1 )}
   }
 
   const incrementRetweet = () => {
@@ -22,11 +23,13 @@ export default function TweetActions({ tweet }) {
   }
 
   return (
-
+      
     <div className="tweet-actions">
-      <TweetAction logo = {dataTweetAction.logoActionCommentaire} action = {dataTweetAction.commentaire}   eventOfClick={incrementCommentaire} />
-      <TweetAction logo = {dataTweetAction.logoActionRetweet} action = {dataTweetAction.retweet} eventOfClick = {incrementRetweet}/>
-      <TweetAction  logo = {dataTweetAction.logoActionLike}  action = {dataTweetAction.like}  eventOfClick = {incrementLike}/>
+      {console.log("La valeur de dataTweetAction.commentaire",dataTweetAction.commentaire )}
+      
+      <TweetAction logo = {dataTweetAction.logoActionCommentaire} action = {commentaires}   eventOfClick={incrementCommentaire} />
+      <TweetAction logo = {dataTweetAction.logoActionRetweet} action = {retweets} eventOfClick = {incrementRetweet}/>
+      <TweetAction  logo = {dataTweetAction.logoActionLike}  action = {likes}  eventOfClick = {incrementLike}/>
       <TweetAction  logo = {dataTweetAction.logoActionDownloard}   />
 
     </div>

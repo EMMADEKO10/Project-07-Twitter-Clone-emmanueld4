@@ -3,7 +3,7 @@ import TweetEditor from './tweet_editor/TweetEditor';
 import Tweets from './Tweets/Tweets';
 function Timeline() {
   return (
-    <div className="">
+    <div className='timeline'>
       <Header />
       <TweetEditor />
       <Tweets />

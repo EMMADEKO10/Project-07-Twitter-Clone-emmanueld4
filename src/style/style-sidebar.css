@@ -1,0 +1,247 @@
+
+:root {
+    --black: rgba(0, 0, 0, 1);
+    --text: rgba(255, 255, 255, 1);
+    --blue: rgba(29, 155, 240, 1);
+    --hover: rgba(22, 22, 22, 1);
+    --gray: rgba(110, 118, 125, 1);
+    --border-color: rgba(47, 51, 54, 1);
+    --trends-color: rgba(32, 35, 39, 1);
+  }
+ 
+  .btnNavigation{
+    padding :   10px 40px;
+    margin : 20px 15px;
+    /* margin-bottom: 0px; */ 
+  }
+
+
+  .trends-seting{
+    margin-right: 15px;
+  }
+
+  .trends P{
+    font-size: 14px;
+  }
+
+  .TrendItems{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: black;
+    padding: 20px;
+  }
+  .TrendItems p, .TrendItems div{
+    background-color: black;
+  }
+
+  .TrendCard{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color:var(-- --border-color) ;
+  }
+
+
+.textProfilSidebar{
+
+  font-size: 12px;
+position: absolute;
+top: 12px;
+left: 57px;
+font-family: "SF Pro Display-Bold", Helvetica;
+font-weight: 500;
+color: var(--text);
+letter-spacing: 0;
+line-height: normal;
+border : 1px solid black;
+
+}
+
+.menu-button-normal-magin{
+    margin-top: 100px;  
+}
+/* margin: 50px 0px 0px 0px; */
+
+/* .sidebar { */
+    /* position: relative; */
+    /* position: fixed; */
+      /* width: 275px; */
+      /* height: 1024px; */
+      /* background-color: var(--black); */
+    /* font-family: 'Inter', sans-serif; */
+    /* border-left: 1px solid #2F3336; */
+    /* border-right: 1px solid #2F3336; */
+    /* margin-right: 40px; */
+    /* padding: 0px 40px; */
+    /* border : 1px solid black; */
+  /* } */
+
+  
+
+
+  .sidebar{
+    position: fixed;
+    margin-left: 30px;
+  }
+
+
+  .menu-button-normal {
+    position: relative;
+    width: 251px;
+    height: 50px;
+    border-radius: 50px;
+    /* overflow: hidden; */
+    /* all: unset; */
+    box-sizing: border-box;
+    border : 1px solid black;
+  }
+
+
+ .menu-button-normal .icons-home-fill {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 13px;
+  left: 13px;
+  border : 1px solid black;
+}
+
+.menu-button-normal .text-wrapper {
+  position: absolute;
+  top: 12px;
+  left: 57px;
+  font-family: "SF Pro Display-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--text);
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  border : 1px solid black;
+}
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

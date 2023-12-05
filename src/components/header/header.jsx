@@ -1,4 +1,4 @@
-import { BsStars } from "react-icons/bs";
+// import { BsStars } from "react-icons/bs";
 
 
 function PageTitle() {
@@ -13,8 +13,9 @@ function PageTitle() {
 function TopTweets() {
 
   return (
-    <div className="top-tweets"><BsStars className="top-tweets"/>
-    </div>
+    // <div className="top-tweets"><BsStars className="top-tweets"/>
+    // </div>
+    <div></div>
   );
 }
 export default function Header() {

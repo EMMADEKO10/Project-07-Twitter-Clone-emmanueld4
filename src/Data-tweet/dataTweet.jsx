@@ -31,9 +31,9 @@ export var dataTweets = [
 
     dataTweetAction: {
       tweetId: 2,
-      commentaire: '19',
-      retweet: '48',
-      like: '482',
+      commentaire: 19,
+      retweet: 48,
+      like: 482,
       logoActionCommentaire: "src/images/Reply.svg",
       logoActionRetweet: "src/images/Retweet.svg",
       logoActionLike: "src/images/React.svg",

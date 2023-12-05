@@ -1,0 +1,91 @@
+
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --text: rgba(255, 255, 255, 1);
+  --blue: rgba(29, 155, 240, 1);
+  --hover: rgba(22, 22, 22, 1);
+  --gray: rgba(110, 118, 125, 1);
+  --border-color: rgba(47, 51, 54, 1);
+  --trends-color: rgba(32, 35, 39, 1);
+}
+.contentTrends{
+  background-color: black;
+  color: white;
+  margin-left: 20px;
+  margin-left: 30px;
+}
+
+
+.trends{
+  display: flex;
+  background-color: #202327;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.form-control {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 10px;
+  font-size: 16px;
+  border-radius : 20px;
+  margin: 30px 30px 30px 30px;
+}
+  
+.form-control:focus {
+  background-color: #333;
+  color: #fff;
+}
+
+/* .search-box { */
+    /* position: relative; */
+    /* width: 350px; */
+    /* height: 42px; */
+    /* background-color: #202327; */
+    /* border-radius: 42px; */
+    /* overflow: hidden; */
+    /* color: white; */
+/*      */
+  /* } */
+  
+  /* .search-box .search-icon { */
+    /* width: 42px; */
+    /* height: 42px; */
+    /* left: 0; */
+    /* background-color: var(--trends-color); */
+    /* border-radius: 42px; */
+    /* overflow: hidden; */
+    /* position: absolute; */
+    /* top: 0; */
+  /* } */
+/*    */
+  /* .search-box .icons-search { */
+    /* position: absolute; */
+    /* width: 18px; */
+    /* height: 18px; */
+    /* top: 12px; */
+    /* left: 12px; */
+  /* } */
+/*    */
+  /* .search-box .search-text { */
+    /* display: inline-flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* padding: 12px; */
+    /* left: 42px; */
+    /* position: absolute; */
+    /* top: 0; */
+  /* } */
+/*    */
+  /* .search-box .text-wrapper { */
+    /* position: relative; */
+    /* width: fit-content; */
+    /* margin-top: -1px; */
+    /* font-family: "SF Pro Text-Regular", Helvetica; */
+    /* font-weight: 400; */
+    /* color: #6e767d; */
+    /* font-size: 15px; */
+    /* letter-spacing: 0; */
+    /* line-height: normal; */
+    /* white-space: nowrap; */
+  /* } */

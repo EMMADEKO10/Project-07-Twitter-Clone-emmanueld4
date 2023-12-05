@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 
-body{
-    background-color: black;
-    color: white;
+
+main{
+    display: flex;
     margin: 0 auto;
-    max-width: 1800px;
+    background-color: black; 
+    font-family: 'Inter', sans-serif;
+    border-left: 1px solid #2F3336;
+    border-right: 1px solid #2F3336;
+    color: white; 
+    width: 100%;
 }
 
 #root{
@@ -19,6 +24,7 @@ body{
     font-family: 'Inter', sans-serif;
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
+    margin-left: 300px;
 }
 
 .header {

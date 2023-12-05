@@ -18,10 +18,10 @@ function TweetEditorActions() {
         </div>
     );
 }
-function Button() {
+export function Button() {
     return (
         <div>
-            <button id = "monBouton" className="button">Tweet</button> 
+            <button id = "monBouton" className="button btnNavigation">Tweet</button> 
         </div>
         
     );
