@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 
-
-main{
-    display: flex;
+body{
+    background-color: black !important;
     margin: 0 auto;
-    background-color: black; 
     font-family: 'Inter', sans-serif;
-    border-left: 1px solid #2F3336;
-    border-right: 1px solid #2F3336;
-    color: white; 
-    width: 100%;
+    max-width: 1800px;
+    color: white;
+    
 }
+
+display-flexx{
+    display: flex;
+    flex-direction: row;
+}
+
+/* main{ */
+    /* display: flex; */
+    /* margin: 0 auto; */
+    /* background-color: black;  */
+    /* font-family: 'Inter', sans-serif; */
+    /* border-left: 1px solid #2F3336; */
+    /* border-right: 1px solid #2F3336; */
+    /* color: white;  */
+    /* width: 100%; */
+/* } */
+/*  */
 
 #root{
     width: 100%;
@@ -20,11 +34,11 @@ main{
 }
 
 .timeline {
-    flex: 0 0 800px;
+    flex: 0 0 700px;
     font-family: 'Inter', sans-serif;
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
-    margin-left: 300px;
+    /* margin-left: 300px; */
 }
 
 .header {
@@ -56,7 +70,6 @@ main{
 
 .avatar {
     flex: 0 0 70px;
-    /*padding: 0 rem;*/
 }
 
 .avatar img {
@@ -92,9 +105,9 @@ main{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /*padding: 0.8rem 0;*/
     gap: 1rem;
 }
+
 .tweet-editor-actions button {
     background-color: transparent;
     border: none;
@@ -118,9 +131,9 @@ main{
 }
 
 .tweet-avatar {
-    /*height: 70px;*/
-    /*width: 70px;*/
-    flex: 0 0 70px;
+    flex: 0 0 60px;
+    margin : 0;
+    padding: 0;
 }
 
 .tweet-avatar img{
@@ -198,4 +211,10 @@ main{
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+
+
+.commentaireColor :hover{
+    background-color: #6E767D;
 }

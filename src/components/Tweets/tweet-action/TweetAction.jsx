@@ -3,11 +3,19 @@
 export default function TweetAction({ logo, action, eventOfClick }) {
 
     return (
-        
-            <div onClick={eventOfClick} className="tweet-action">
-                <img src={logo} alt="" />
-                {action}
-            </div>
-        
+
+        <div onClick={eventOfClick} className="commentaireColor tweet-action">
+               <img src={logo} alt=""  />
+            {action}
+        </div>
+
     )
 };
+
+
+
+
+
+
+
+

@@ -1,34 +1,30 @@
 
-// import TweetEditorButtons from './../tweet_editor/TweetEditorButtons';
+
 import { Button } from './../tweet_editor/TweetEditorButtons';
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 export default function Sidebar() {
     return (
 
-        <div class="sidebar">
+        <div className="sidebar">
+            <div className='sidebarNav'>
 
+                <ul>
+                    <li><Navigation logo={"src/images/image Page 2/Icons/Twitter.png"} titre="" /></li>
+                    <li><NavLink to='/'><Navigation logo={"src/images/image Page 2/Icons/Home-Fill.svg"} titre="Home" /></NavLink></li>
+                    <li><Navigation logo={"src/images/image Page 2/Icons/Explore.svg"} titre="Explore" /></li>
+                    <li><Navigation logo={"src/images/image Page 2/Icons/Notifications.svg"} titre="Notifications" /></li>
+                    <li><Navigation logo={"src/images/image Page 2/Icons/Messages.svg"} titre="Messages" /></li>
+                    <li> <Navigation logo={"src/images/image Page 2/Icons/Bookmarks.svg"} titre="Bookmarks" /></li>
+                    <li><Navigation logo={"src/images/image Page 2/Icons/Lists.svg"} titre="Lists" /></li>
+                    <li><NavLink to='/Profil'><Navigation logo={"src/images/image Page 2/Icons/Profile.svg"} titre="Profils" /></NavLink></li>
+                    <li><Navigation logo={"src/images/image Page 2/Icons/More.svg"} titre="More" /></li>
+                </ul>
 
+                <Button />
+            </div>
 
-
-            <Navigation logo={"src/images/image Page 2/Icons/Twitter.png"} titre="" />
-            <Navigation logo={"src/images/image Page 2/Icons/Home-Fill.svg"} titre="Home" />
-            <Navigation logo={"src/images/image Page 2/Icons/Explore.svg"} titre="Explore" />
-            <Navigation logo={"src/images/image Page 2/Icons/Notifications.svg"} titre="Notifications" />
-            <Navigation logo={"src/images/image Page 2/Icons/Messages.svg"} titre="Messages" />
-            <Navigation logo={"src/images/image Page 2/Icons/Bookmarks.svg"} titre="Bookmarks" />
-            <Navigation logo={"src/images/image Page 2/Icons/Lists.svg"} titre="Lists" />
-
-            {/* <NavLink to='/Profil'> */}
-                <Navigation  logo={"src/images/image Page 2/Icons/Profile.svg"} titre="Profils" />
-            {/* </NavLink> */}
-            {/* lien={'/profil'} */}
-
-            {/* <Navigation logo={"src/images/image Page 2/Icons/Profile.svg"} titre="Profils" /> */}
-            <Navigation logo={"src/images/image Page 2/Icons/More.svg"} titre="More" />
-            <Button />
-            {/* <Navigation logo = {"src/images/profile-photo.png"}  titre ={ <TitreProfilSidebar/>}/>   */}
             <TitreProfilSidebar />
         </div>
     )
@@ -36,24 +32,32 @@ export default function Sidebar() {
 
 function TitreProfilSidebar() {
     return (
-        <div className='menu-button-normal'> 
-            <span><img className="icons-home-fill" src="src/images/profile-photo.png" alt="" /></span>
-            <div className='textProfilSidebar'>
-                <div>Bradley Ortiz</div>
-                <p >@Bradley_</p>
-            </div>
 
-           
+
+    <div>
+        <div className="tweet-content-follow">
+            
+            <div className="avatar-follow">
+            <img className="icons-home-fill" src="src/images/profile-photo.png" alt="" />
+            </div>
+            <div className="tweet-details">
+                <div className="tweet-title-follow"> <div>Bradley Ortiz </div> < img src="src\images\image Page 2\Icons\Market_Pri.png" alt="" /></div>
+                <p>@Bradley_</p>
+            </div>
+            {/* </div> */}
+            <span><img src="src\images\image Page 2\Icons\3point.png" alt="" /></span>
         </div>
+    </div>
     )
 }
 
 export function Navigation({ logo, titre }) {
+
     return (
-        <div className="menu-button-normal menu-button-normal-magine">
+        <div className="menu-button-normal">
             <span><img className="icons-home-fill" src={logo} alt="" /></span>
             <div className="text-wrapper">{titre}</div>
-            {/* <NavLink to ={lien} ></NavLink> */}
+
         </div>
     )
 }

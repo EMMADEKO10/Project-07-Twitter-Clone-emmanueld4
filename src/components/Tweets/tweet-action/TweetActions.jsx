@@ -1,37 +1,50 @@
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import TweetAction from './TweetAction';
-export default function TweetActions({ tweet }) {
 
+
+export default function TweetActions({ tweet, color }) {
   const { dataTweetAction } = tweet;
 
-  const [likes, setLikes] = useState(dataTweetAction.like);
-  const [commentaires, setCommentaires] = useState(dataTweetAction.commentaire);
-  const [retweets, setRetweets] = useState(dataTweetAction.retweet);
 
+  const [tweetAction, setTweetAction] = useState({
+    likes: dataTweetAction.like,
+    commentaires: dataTweetAction.commentaires,
+    retweets: dataTweetAction.retweets,
+    isLiked: false,
+    isCommentaires: false,
+    isRetweets: false
+  });
 
   const incrementLike = () => {
-    setLikes(dataTweetAction.like + 1)
-  }
+    setTweetAction(prevState => ({
+      ...prevState,
+      likes: prevState.isLiked ? prevState.likes - 1 : prevState.likes + 1,
+      isLiked: !prevState.isLiked,
 
-  const incrementCommentaire = () => {
-    setCommentaires(dataTweetAction.commentaire + 1)
-    // {console.log("La valeur de dataTweetAction.commentaire",dataTweetAction.commentaire + 1 )}
-  }
+    }));
 
-  const incrementRetweet = () => {
-    setRetweets(dataTweetAction.retweet + 1)
-  }
+  };
+
+  // const incrementCommentaire = () => {
+  // setTweetAction(prevState => ({
+  // ...prevState,
+  // commentaires: prevState.commentaires + 1
+  // }));
+  // };
+
+  // const incrementRetweet = () => {
+  // setTweetAction(prevState => ({
+  // ...prevState,
+  // retweets: prevState.retweets + 1
+  // }));
+  // }; action={tweetAction.commentaires}   action={tweetAction.retweets}
 
   return (
-      
-    <div className="tweet-actions">
-      {console.log("La valeur de dataTweetAction.commentaire",dataTweetAction.commentaire )}
-      
-      <TweetAction logo = {dataTweetAction.logoActionCommentaire} action = {commentaires}   eventOfClick={incrementCommentaire} />
-      <TweetAction logo = {dataTweetAction.logoActionRetweet} action = {retweets} eventOfClick = {incrementRetweet}/>
-      <TweetAction  logo = {dataTweetAction.logoActionLike}  action = {likes}  eventOfClick = {incrementLike}/>
-      <TweetAction  logo = {dataTweetAction.logoActionDownloard}   />
-
+    <div className="tweet-actions" >
+      <TweetAction className="commentaireColor" logo={dataTweetAction.logoActionCommentaire} action={dataTweetAction.commentaire} />
+      <TweetAction className="commentaireColor" logo={dataTweetAction.logoActionRetweet} action={dataTweetAction.retweet} />
+      <TweetAction className="commentaireColor" logo={dataTweetAction.logoActionLike} action={dataTweetAction.like} eventOfClick={incrementLike} />
+      <TweetAction className="commentaireColor" logo={dataTweetAction.logoActionDownloard} />
     </div>
-  )
+  );
 }

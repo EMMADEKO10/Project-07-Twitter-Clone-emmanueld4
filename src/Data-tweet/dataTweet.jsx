@@ -1,3 +1,4 @@
+
 export var dataTweets = [
 
   {
@@ -97,9 +98,11 @@ export var dataTweets = [
       commentaire: '465.3K',
       logoActionCommentaire: "src/images/Reply.svg",
       logoActionRetweet: "src/images/Retweet.svg",
-      logoActionLike: "src/images/React.svg",
+      logoActionLike: "",
       logoActionDownloard: "src/images/Tweet-Replies.svg"
 
     }
   },
 ];
+
+

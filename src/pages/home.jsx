@@ -9,33 +9,19 @@ import SidebarRight from '../components/Composant_Sidebar/sidebar_right';
 function Home() {
   return (
     <>
-      
+     <Sidebar />
       <main className='main'>
-        <Sidebar />
+      
         <Timeline />
-        {/* <Sidebar /> */}
-        <SidebarRight />
+       
       </main>
+      <SidebarRight />
+     
     </>
 
 
   );
 }
 
-// function Trends(){
-// return(
-// <div class="trends">
-{/*  */ }
-{/* </div> */ }
-// )
-// }
-// 
-// function Sidebar(){
-// return(
-// <div className='sidebar'>
-{/*  */ }
-{/* </div> */ }
-// )
-// }
 
 export default Home;

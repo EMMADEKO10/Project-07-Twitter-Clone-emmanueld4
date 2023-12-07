@@ -10,20 +10,22 @@ function PageTitle() {
   );
 }
 
-function TopTweets() {
+// function TopTweets() {
 
-  return (
+  // return (
     // <div className="top-tweets"><BsStars className="top-tweets"/>
-    // </div>
-    <div></div>
-  );
-}
+  // </div>
+    // <div></div>
+  // );
+// }
+
+
 export default function Header() {
   return (
 
     <header className="header">
       <PageTitle />
-      <TopTweets />
+      {/* <TopTweets /> */}
     </header>
   );
   

@@ -14,13 +14,12 @@ function Layout({children}) {
 export default Layout;
 
 
-{/* <BrowserRouter> */}
-{/* <Header /> */}
-{/* <Routes> */}
-  {/* <Route path='/' element={<Home />} /> */}
-  {/* <Route path='/programmes' element={<Programme />} /> */}
-  {/* <Route path='/professeurs' element={<Professeur />} /> */}
-  {/* <Route path='/etudiants' element={<Etudiants />} /> */}
-{/* </Routes> */}
-{/*  */}
-{/* </BrowserRouter> */}
+
+
+
+
+
+
+
+
+
