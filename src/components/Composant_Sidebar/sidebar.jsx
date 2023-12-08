@@ -1,4 +1,5 @@
 
+// Ce fichier contient plusieurs composant.
 
 import { Button } from './../tweet_editor/TweetEditorButtons';
 import { NavLink } from "react-router-dom";
@@ -21,7 +22,6 @@ export default function Sidebar() {
                     <li><NavLink to='/Profil'><Navigation logo={"src/images/image Page 2/Icons/Profile.svg"} titre="Profils" /></NavLink></li>
                     <li><Navigation logo={"src/images/image Page 2/Icons/More.svg"} titre="More" /></li>
                 </ul>
-
                 <Button />
             </div>
 
@@ -36,7 +36,6 @@ function TitreProfilSidebar() {
 
     <div>
         <div className="tweet-content-follow">
-            
             <div className="avatar-follow">
             <img className="icons-home-fill" src="src/images/profile-photo.png" alt="" />
             </div>
@@ -44,7 +43,6 @@ function TitreProfilSidebar() {
                 <div className="tweet-title-follow"> <div>Bradley Ortiz </div> < img src="src\images\image Page 2\Icons\Market_Pri.png" alt="" /></div>
                 <p>@Bradley_</p>
             </div>
-            {/* </div> */}
             <span><img src="src\images\image Page 2\Icons\3point.png" alt="" /></span>
         </div>
     </div>

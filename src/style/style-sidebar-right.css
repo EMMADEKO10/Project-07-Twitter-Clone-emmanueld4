@@ -8,6 +8,11 @@
   --border-color: rgba(47, 51, 54, 1);
   --trends-color: rgba(32, 35, 39, 1);
 }
+
+div{
+  border : 1px solid blue
+}
+
 .contentTrends{
   background-color: black;
   color: white;
@@ -22,15 +27,6 @@
 .tweet-details p{
   color: #646464;
 }
-
-/* .btnWhiteTweet{ */
-/*  */
-/* margin-left:20px ; */
-/* border: none; */
-/*   */
-/* background-color: #ffffff; */
-/* color: black !important; */
-/* } */
 
 
 .trends{
@@ -58,7 +54,7 @@
 .content{
   width: 308px;
   align-items: flex-start;
-  /* gap: 4px; */
+  
 }
 
 .content .subtitle{
@@ -77,7 +73,6 @@
   border: none;
   border-radius: 50px;
   background-color: #ffffff;
-  /* color: white; */
   font-size: 1rem;
   
 }
@@ -93,18 +88,16 @@
 
 .tweet-content-follow{
   display: flex;
-  /* flex-direction: column; */
   gap: 10px;
-  /* width: 100%; */
 }
 
 .profil-follow{
   display: flex;
-
   gap: 10px;
-  /* padding: 1.5rem 1rem; */
   border-bottom: 1px solid #2F3336;
 }
+
+
 
 
 

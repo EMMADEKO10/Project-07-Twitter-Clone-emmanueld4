@@ -31,9 +31,9 @@ export var dataTweets = [
     tweetAvatar: <img src='src\images\Profile-Photo-new-york.png' alt="" />,
 
     dataTweetAction: {
-      tweetId: 2,
+      tweetId: '2M',
       commentaire: 19,
-      retweet: 48,
+      retweet: '486k',
       like: 482,
       logoActionCommentaire: "src/images/Reply.svg",
       logoActionRetweet: "src/images/Retweet.svg",
@@ -53,9 +53,9 @@ export var dataTweets = [
 
     dataTweetAction: {
       tweetId: 3,
-      commentaire: '6.8K',
-      retweet: '36.6K',
-      like: '267.1K',
+      commentaire: '64',
+      retweet: '365',
+      like: 267,
       logoActionCommentaire: "src/images/Reply.svg",
       logoActionRetweet: "src/images/Retweet.svg",
       logoActionLike: "src/images/React.svg",
@@ -73,9 +73,9 @@ export var dataTweets = [
     tweetAvatar: <img src='src/images/logo-rond-twitter-1536x1536.png ' alt="" />,
     dataTweetAction: {
       tweetId: 4,
-      commentaire: '118.7K',
-      retweet: '785.4K',
-      like: '3.3M',
+      commentaire: '118k',
+      retweet: '785',
+      like: 36534,
       logoActionCommentaire: "src/images/Reply.svg",
       logoActionRetweet: "src/images/Retweet.svg",
       logoActionLike: "src/images/React.svg",
@@ -93,12 +93,12 @@ export var dataTweets = [
     tweetTitleDetails: <div className='tweet-title-details'>@Twitter . Oct 4</div>,
     dataTweetAction: {
       tweetId: 5,
-      retweet: '385.4K',
-      like: '1.3M',
-      commentaire: '465.3K',
+      retweet: '3.8M',
+      like: 134,
+      commentaire: '465',
       logoActionCommentaire: "src/images/Reply.svg",
       logoActionRetweet: "src/images/Retweet.svg",
-      logoActionLike: "",
+      logoActionLike: "src/images/React.svg",
       logoActionDownloard: "src/images/Tweet-Replies.svg"
 
     }

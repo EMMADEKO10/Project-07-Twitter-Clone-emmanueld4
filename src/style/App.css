@@ -15,17 +15,6 @@ display-flexx{
     flex-direction: row;
 }
 
-/* main{ */
-    /* display: flex; */
-    /* margin: 0 auto; */
-    /* background-color: black;  */
-    /* font-family: 'Inter', sans-serif; */
-    /* border-left: 1px solid #2F3336; */
-    /* border-right: 1px solid #2F3336; */
-    /* color: white;  */
-    /* width: 100%; */
-/* } */
-/*  */
 
 #root{
     width: 100%;
@@ -215,6 +204,42 @@ display-flexx{
 
 
 
-.commentaireColor :hover{
-    background-color: #6E767D;
+.tweet-action :hover{
+    color:red;
+    /* opacity: 0.2; */
 }
+/*  */
+
+
+.hoverIcon :hover{
+    /* background-color: aqua; */
+    color: blue;
+    border-radius: 30px;
+    /* opacity: 0.2; */
+}
+
+.action-content{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.hovered {
+    color: blue;
+  }
+  
+  .hovered:hover {
+    color: darkblue;
+  }
+
+  hoverIcon {
+    fill: blue;
+    /* transition: fill 0.2s; */
+  }
+  
+  .hoverIcon:hover {
+    /* fill: rgb(16, 139, 0); */
+  }

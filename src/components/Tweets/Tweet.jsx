@@ -1,6 +1,5 @@
 import TweetAvatar from "./TweetAvatar";
 import TweetContent from "./TweetContent";
-// import { NavLink } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 
