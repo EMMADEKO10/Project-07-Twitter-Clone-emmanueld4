@@ -16,7 +16,7 @@ function TopTweets() {
     <div className="top-tweets"> 
     <img className='avatar' src="src\images\Timeline-Prop.png" alt="profil" />     
   </div>
-    <div></div>
+    
   );
 }
 
