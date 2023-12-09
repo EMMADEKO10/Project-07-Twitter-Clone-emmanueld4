@@ -12,7 +12,7 @@ export default function TweetActions({ tweet }) {
   const { dataTweetAction } = tweet;
 
 // Ici j'ai créé un tableau d'objects que j'ai destructuer dans le UseState et J'ai initialisé les attributs ou les proprieté de mon tableau d'objects
-  
+
 const [tweetAction, setTweetAction] = useState({
     likes: dataTweetAction.like,
     commentaires: dataTweetAction.commentaires,
@@ -32,6 +32,7 @@ const [tweetAction, setTweetAction] = useState({
       ...prevState,
       likes: prevState.isLiked ? prevState.likes - 1 : prevState.likes + 1,
       colorFill: prevState.isLiked ? "#6E767D" : "#FF0000",
+      // ( url === "urllike" ? "red" : "darkblue") : colorFill
       url :prevState.isLiked ? urlretweet :urllikedRed,
       isLiked: !prevState.isLiked,
     }));

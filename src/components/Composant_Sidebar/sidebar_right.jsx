@@ -1,10 +1,11 @@
 
+// Ces Fichiers Contients plusieurs Composants.
 
 export default function SidebarRight() {
+
     return (
         <div className="contentTrends">
 
-            {/* <img className="icons-search" src="src/images/image Page 2/Icons/reseach.svg" /> */}
             <input type="text" className="form-control" placeholder="Serach Twitter" />
             <TrendCard />
             <Follow />
@@ -17,7 +18,7 @@ export default function SidebarRight() {
 function TrendCard() {
     return (
         <div >
-            {/* className="TrendCard" */}
+         
             <TrendItems trends={"Think you"} />
         </div>
     )
@@ -60,8 +61,7 @@ function Trends({ trend, trendDetails, trendNumber }) {
 export function Follow() {
     return (
         <div className="TrendItems">
-            {/* <TrendItems  trends={"Think you"}/> */}
-
+           
             <ProfilFollow imageProfil="src/images/profile-photo.png" titleProfil="The New york city" titleProfilDetail="@new time" />
             <ProfilFollow imageProfil="src/images/profile-photo.png" titleProfil="The New york city" titleProfilDetail="@new time" />
             <ProfilFollow imageProfil="src/images/profile-photo.png" titleProfil="The New york city" titleProfilDetail="@new time" />
@@ -75,7 +75,7 @@ export function ProfilFollow({ imageProfil, titleProfil, titleProfilDetail}) {
         <div className="">
 
             <div className="tweet-content-follow">
-                {/* <div className=" tweet-follow"> */}
+               
                 <div className="avatar-follow">
                     <img src={imageProfil} alt="" />
                 </div>
@@ -84,7 +84,7 @@ export function ProfilFollow({ imageProfil, titleProfil, titleProfilDetail}) {
                     <p>{titleProfilDetail}</p>
                 </div>
 
-                {/* </div> */}
+              
                 <button className="btnWhiteTweet">Follow</button>
             </div>
         </div>

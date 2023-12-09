@@ -213,7 +213,7 @@ display-flexx{
 
 .hoverIcon :hover{
     /* background-color: aqua; */
-    color: blue;
+    /* color: blue; */
     border-radius: 30px;
     /* opacity: 0.2; */
 }
@@ -228,18 +228,26 @@ display-flexx{
 
 
 .hovered {
-    color: blue;
+    /* color: blue; */
   }
   
   .hovered:hover {
-    color: darkblue;
+    /* color: darkblue; */
   }
 
   hoverIcon {
-    fill: blue;
+    /* fill: blue; */
     /* transition: fill 0.2s; */
   }
   
   .hoverIcon:hover {
     /* fill: rgb(16, 139, 0); */
+  }
+
+  .hoverLike:hover{
+    color:red;
+  }
+  .hoverOtherIcon:hover{
+    color: #1D9BF0;
+    transform: scale(1.2);
   }
