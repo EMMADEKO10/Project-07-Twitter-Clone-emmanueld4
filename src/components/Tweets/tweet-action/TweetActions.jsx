@@ -32,7 +32,6 @@ const [tweetAction, setTweetAction] = useState({
       ...prevState,
       likes: prevState.isLiked ? prevState.likes - 1 : prevState.likes + 1,
       colorFill: prevState.isLiked ? "#6E767D" : "#FF0000",
-      // ( url === "urllike" ? "red" : "darkblue") : colorFill
       url :prevState.isLiked ? urlretweet :urllikedRed,
       isLiked: !prevState.isLiked,
     }));
@@ -43,7 +42,7 @@ const [tweetAction, setTweetAction] = useState({
       <TweetAction colorFill={"#6E767D"} url={urlcommentaire} action={dataTweetAction.commentaire} />
       <TweetAction colorFill={"#6E767D"} url={urllike} action={dataTweetAction.retweet} />
       {<TweetAction colorFill={tweetAction.colorFill} url={tweetAction.url} action={tweetAction.likes} eventOfClick={incrementLike} />}
-      <TweetAction colorFill={"#6E767D"} url={urlrepley_tweet} url1={urlrepley_tweet2} />
+      <TweetAction colorFill={"#6E767D"} url={urlrepley_tweet} url2={urlrepley_tweet2} />
 
     </div>
   );

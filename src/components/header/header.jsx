@@ -10,14 +10,15 @@ function PageTitle() {
   );
 }
 
-// function TopTweets() {
+function TopTweets() {
 
-  // return (
-    // <div className="top-tweets"><BsStars className="top-tweets"/>
-  // </div>
-    // <div></div>
-  // );
-// }
+  return (
+    <div className="top-tweets"> 
+    <img className='avatar' src="src\images\Timeline-Prop.png" alt="profil" />     
+  </div>
+    <div></div>
+  );
+}
 
 
 export default function Header() {
@@ -25,7 +26,7 @@ export default function Header() {
 
     <header className="header">
       <PageTitle />
-      {/* <TopTweets /> */}
+      <TopTweets />
     </header>
   );
   

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
+/* div{ */
+    /* border: 1px solid yellow */
+/* } */
 
 body{
     background-color: black !important;
@@ -209,13 +212,16 @@ display-flexx{
     /* opacity: 0.2; */
 }
 /*  */
-
+.hoverIcon{
+    display: flex;
+justify-items: center;
+justify-content: center;
+align-items: center; 
+padding: 1px;   
+}
 
 .hoverIcon :hover{
-    /* background-color: aqua; */
-    /* color: blue; */
     border-radius: 30px;
-    /* opacity: 0.2; */
 }
 
 .action-content{
@@ -226,28 +232,40 @@ display-flexx{
     gap: 5px;
 }
 
-
-.hovered {
-    /* color: blue; */
-  }
-  
-  .hovered:hover {
-    /* color: darkblue; */
-  }
-
-  hoverIcon {
-    /* fill: blue; */
-    /* transition: fill 0.2s; */
-  }
-  
-  .hoverIcon:hover {
-    /* fill: rgb(16, 139, 0); */
-  }
+action-content span{
+    margin-left : 10px;
+}
 
   .hoverLike:hover{
     color:red;
   }
+
+
   .hoverOtherIcon:hover{
     color: #1D9BF0;
-    transform: scale(1.2);
+  }
+
+  .hoverText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .action-content div{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+  }
+
+  .display-fex-justify{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2px;
   }
