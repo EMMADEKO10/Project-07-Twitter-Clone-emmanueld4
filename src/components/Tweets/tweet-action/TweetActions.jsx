@@ -43,7 +43,6 @@ const [tweetAction, setTweetAction] = useState({
       <TweetAction colorFill={"#6E767D"} url={urllike} action={dataTweetAction.retweet} />
       {<TweetAction colorFill={tweetAction.colorFill} url={tweetAction.url} action={tweetAction.likes} eventOfClick={incrementLike} />}
       <TweetAction colorFill={"#6E767D"} url={urlrepley_tweet} url2={urlrepley_tweet2} />
-
     </div>
   );
 

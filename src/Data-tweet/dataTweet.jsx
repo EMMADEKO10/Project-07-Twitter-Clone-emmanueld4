@@ -12,12 +12,8 @@ export var dataTweets = [
       tweetId: 1,
       commentaire: 57,
       retweet: 144,
-      like: 114,
-      logoActionCommentaire: "src/images/Reply.svg",
-      logoActionRetweet: "src/images/Retweet.svg",
-      logoActionLike: "src/images/React.svg",
-      logoActionDownloard: "src/images/Tweet-Replies.svg"
-    }
+      like: 114
+    },
   },
 
 
@@ -35,11 +31,7 @@ export var dataTweets = [
       commentaire: 19,
       retweet: '486k',
       like: 482,
-      logoActionCommentaire: "src/images/Reply.svg",
-      logoActionRetweet: "src/images/Retweet.svg",
-      logoActionLike: "src/images/React.svg",
-      logoActionDownloard: "src/images/Tweet-Replies.svg"
-    }
+    },
   },
 
 
@@ -56,11 +48,7 @@ export var dataTweets = [
       commentaire: '64',
       retweet: '365',
       like: 267,
-      logoActionCommentaire: "src/images/Reply.svg",
-      logoActionRetweet: "src/images/Retweet.svg",
-      logoActionLike: "src/images/React.svg",
-      logoActionDownloard: "src/images/Tweet-Replies.svg"
-    }
+    },
   },
 
 
@@ -75,14 +63,9 @@ export var dataTweets = [
       tweetId: 4,
       commentaire: '118k',
       retweet: '785',
-      like: 36534,
-      logoActionCommentaire: "src/images/Reply.svg",
-      logoActionRetweet: "src/images/Retweet.svg",
-      logoActionLike: "src/images/React.svg",
-      logoActionDownloard: "src/images/Tweet-Replies.svg"
-    }
+      like: 36534
   },
-
+  },
 
   {
     id: 5,
@@ -96,9 +79,6 @@ export var dataTweets = [
       retweet: '3.8M',
       like: 134,
       commentaire: '465',
-      logoActionCommentaire: "src/images/Reply.svg",
-      logoActionRetweet: "src/images/Retweet.svg",
-      logoActionLike: "src/images/React.svg",
       logoActionDownloard: "src/images/Tweet-Replies.svg"
 
     }
