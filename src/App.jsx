@@ -21,8 +21,7 @@ export default function App() {
           <Route path='/' element={<Home />} />
           <Route path='/profil' element={<Profil />} />
           <Route path='/profil' element={<Tweet />} />
-          
-          
+                    
         </Routes>
 
       </BrowserRouter>

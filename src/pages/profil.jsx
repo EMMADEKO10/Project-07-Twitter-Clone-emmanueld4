@@ -11,7 +11,7 @@ import ProfilFollow from "../components/Composant_Sidebar/sidebar_right"
 
 const dataProfilUser = [
     {
-        id : 1,
+        id: 1,
         name: "@CNN",
         imageBackground: 'url("src/images/profile-photo.png")',
         ProfilPhoto: "src/images/profile-photo.png",
@@ -26,7 +26,7 @@ const dataProfilUser = [
         nombreAbonnement: 2334
     },
     {
-        id : 2,
+        id: 2,
         name: "@Deko Emmanuel",
         imageBackground: 'url("src/images/Emmanuel-Deko.jpg")',
         ProfilPhoto: "src/images/profile-photo.png",
@@ -42,7 +42,7 @@ const dataProfilUser = [
 
 ]
 
-function Profil({ imageProfil, titleProfil, titleProfilDetail, tweet }) {
+function Profil() {
     return (
         <>
             <Sidebar />
@@ -69,22 +69,8 @@ function Profil({ imageProfil, titleProfil, titleProfilDetail, tweet }) {
                         <a href="#">Traduire la biographie.</a>
                     </div>
 
-                    <div className="biography">
-                        <div className="flex-line">
-                            <a href="#">cnn.com</a>
-                            <p className="small-text">A rejoint Twitter en fevrier 2007</p>
-                        </div>
+                    <Biography />
 
-                        <div className="flex-line">
-                            <p>1080 <span className="small-text">abonnements</span> </p>
-                            <p >62M <span className="small-text">abonnés</span></p>
-                        </div>
-
-                        <div className="flex-line">
-
-                            <p className="small-text">Suivi par Benito et PlayStation</p>
-                        </div>
-                    </div>
                     <nav className="navListTweet">
                         <ul className="small-text">
                             <li>Posts </li>
@@ -128,7 +114,7 @@ function TweetDetails() {
                 <img className="icons-home-fill" src="src/images/profile-photo.png" alt="" />
             </div>
             <div className="tweet-details">
-                {/* <div className="tweet-title-follow"> <div>{titleProfil} </div> < img src="src\images\Verified.png" alt="" /></div> */}
+                
                 <div className="tweet-title-follow"> <div>The New york city </div> < img src="src\images\Verified.png" alt="" /></div>
                 <p>@new time</p>
             </div>
@@ -136,7 +122,35 @@ function TweetDetails() {
     )
 }
 
-// ProfilFollow
+
+function Biography() {
+    return (
+        <div className="biography">
+            <div className="flex-line">
+                <a href="#">cnn.com</a>
+                <p className="small-text">A rejoint Twitter en fevrier 2007</p>
+            </div>
+            <div className="flex-line">
+                <p>1080 <span className="small-text">abonnements</span> </p>
+                <p >62M <span className="small-text">abonnés</span></p>
+            </div>
+            <div className="flex-line">
+                <p className="small-text">Suivi par Benito et PlayStation</p>
+            </div>
+        </div>
+    )
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
