@@ -8,7 +8,7 @@ export default function TweetAction({ url, url2, action, eventOfClick, colorFill
     const urllikedRed = "M9.49895 19C13.3967 17.2256 16.2176 14.1965 17.7392 11.1294C19.2374 8.07497 19.4481 5.0332 18.1138 3.20814C16.9082 1.57318 15.3397 0.952155 13.7478 1.00285C12.156 1.05355 10.6109 1.80132 9.49895 2.85326C8.38698 1.80132 6.84194 1.05355 5.25007 1.00285C3.6582 0.952155 2.08975 1.57318 0.884141 3.20814C-0.450218 5.0332 -0.23953 8.07497 1.28211 11.1294C2.78033 14.1965 5.60122 17.2256 9.49895 19Z"
 
     // Les fonctions deverifications si le curseur est posé
-    
+
     const [isHovered, setHovered] = useState(false);
     const handleMouseEnter = () => {
         setHovered(true);
@@ -18,23 +18,23 @@ export default function TweetAction({ url, url2, action, eventOfClick, colorFill
     };
 
     return (
-        <div className="" >
+        <div className="tweet-action" >
 
-            <div className="action-content">
+            {/* <div className="action-content"> */}
 
                 {/* Affichage des icons svg */}
-    
-    <svg onClick={eventOfClick} className={`hoverIcon ${isHovered ? "hovered" : ""}`} width="55" height="75" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d={url} fill={isHovered ? (url === urlretweet || url===urllikedRed ? "red" : "rgba(29, 155, 240, 1)") : colorFill} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
-</svg>
+
+                <svg onClick={eventOfClick} className={`hoverIcon ${isHovered ? "hovered" : ""}`} width="55" height="75" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d={url} fill={isHovered ? (url === urlretweet || url === urllikedRed ? "red" : "rgba(29, 155, 240, 1)") : colorFill} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+                </svg>
 
 
-     <span className={`${isHovered ? (url === urlretweet || url===urllikedRed ? "hoverLike" : "hoverOtherIcon") : ""}`}
-     onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave}>
+                <span className={`${isHovered ? (url === urlretweet || url === urllikedRed ? "hoverLike" : "hoverOtherIcon") : ""}`}
+                    onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     {action}
                 </span>
 
-            </div>
+            {/* </div> */}
         </div>
 
     )

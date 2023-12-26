@@ -86,10 +86,7 @@
   align-items: center;
 }
 
-.tweet-content-follow{
-  display: flex;
-  gap: 10px;
-}
+
 
 .profil-follow{
   display: flex;

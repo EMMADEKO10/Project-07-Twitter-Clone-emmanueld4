@@ -1,57 +1,55 @@
-{/* <Sidebar /> */ }
-import Sidebar from "../components/Composant_Sidebar/sidebar"
+import Sidebar from "../components/sidebar"
 // import Timeline from "../components/timeLine"
-import SidebarRight from "../components/Composant_Sidebar/sidebar_right"
-import Tweets from "../components/Tweets/Tweets"
-import { Navigation } from "../components/Composant_Sidebar/sidebar"
-import { NavLink } from "react-router-dom"
-import ProfilFollow from "../components/Composant_Sidebar/sidebar_right"
-// import Tweet from './../components/Tweets/Tweet';
+import Trends from "../components/trends";
+import { users } from "../Data-tweet/dataCompte";
+import { useContext } from "react";
+import { TweetsContext } from "../App";
+import Tweet from "../components/Tweets/Tweet";
+import { currentUser } from "../components/Tweets/TweetAvatar";
 
+// const dataProfilUser = [
+//     {
+//         id: 1,
+//         name: "@CNN",
+//         imageBackground: 'url("src/images/profile-photo.png")',
+//         ProfilPhoto: "src/images/profile-photo.png",
+//         biographie: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate eum expedita debitis.",
+//         // lien: 
 
-const dataProfilUser = [
-    {
-        id: 1,
-        name: "@CNN",
-        imageBackground: 'url("src/images/profile-photo.png")',
-        ProfilPhoto: "src/images/profile-photo.png",
-        biographie: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate eum expedita debitis.",
-        // lien: 
-
-        // "It's our job to <a href="#">#GoThere</a> & tell the most difficult stories. For breaking news, follow <a href="#">@CNNBRK</a> and download our app <a href="#">cnn.com/apps</a> .",
-        details: "It's our job to" + <a href="#">#GoThere</a> + "& tell the most difficult stories. For breaking news, follow" + <a href="#">@CNNBRK</a> + "and download our app" + <a href="#">cnn.com/apps</a>,
-        // <a href="#">#GoThere</a>
-        numberAbonnees: 1230,
-        nombreDeTweets: 56789,
-        nombreAbonnement: 2334
-    },
-    {
-        id: 2,
-        name: "@Deko Emmanuel",
-        imageBackground: 'url("src/images/Emmanuel-Deko.jpg")',
-        ProfilPhoto: "src/images/profile-photo.png",
-        biographie: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate eum expedita debitis.",
-        // lien: 
-        // "It's our job to <a href="#">#GoThere</a> & tell the most difficult stories. For breaking news, follow <a href="#">@CNNBRK</a> and download
-        details: "It's our job to" + <a href="#">#GoThere</a> + "& tell the most difficult stories. For breaking news, follow" + <a href="#">@CNNBRK</a> + "and download our app" + <a href="#">cnn.com/apps</a>,
-        // <a href="#">#GoThere</a>
-        numberAbonnees: 1230,
-        nombreDeTweets: 56789,
-        nombreAbonnement: 2334
-    }
-
-]
+//         // "It's our job to <a href="#">#GoThere</a> & tell the most difficult stories. For breaking news, follow <a href="#">@CNNBRK</a> and download our app <a href="#">cnn.com/apps</a> .",
+//         details: "It's our job to" + <a href="#">#GoThere</a> + "& tell the most difficult stories. For breaking news, follow" + <a href="#">@CNNBRK</a> + "and download our app" + <a href="#">cnn.com/apps</a>,
+//         // <a href="#">#GoThere</a>
+//         numberAbonnees: 1230,
+//         nombreDeTweets: 56789,
+//         nombreAbonnement: 2334
+//     },
+//     {
+//         id: 2,
+//         name: "@Deko Emmanuel",
+//         imageBackground: 'url("src/images/Emmanuel-Deko.jpg")',
+//         ProfilPhoto: "src/images/profile-photo.png",
+//         biographie: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate eum expedita debitis.",
+//         // lien: 
+//         // "It's our job to <a href="#">#GoThere</a> & tell the most difficult stories. For breaking news, follow <a href="#">@CNNBRK</a> and download
+//         details: "It's our job to" + <a href="#">#GoThere</a> + "& tell the most difficult stories. For breaking news, follow" + <a href="#">@CNNBRK</a> + "and download our app" + <a href="#">cnn.com/apps</a>,
+//         // <a href="#">#GoThere</a>
+//         numberAbonnees: 1230,
+//         nombreDeTweets: 56789,
+//         nombreAbonnement: 2334
+//     }
+//  ]
 
 function Profil() {
+    const context2 = useContext(TweetsContext);
+    const { filteredTweets } = context2; 
+    console.log("DEKO : EXEPTIONS : ",users[currentUser]);
     return (
         <>
             <Sidebar />
             <main className='main'>
 
-
-                {/* <Timeline /> */}
                 <div className="timeline">
-                    <ProfilHeader style={{ backgroundImage: dataProfilUser.imageBackground }} />
+                    <ProfilHeader style={{ backgroundImage: users[currentUser].imageBackground }} />
 
                     <div>
                         <div className="profil-navigation">
@@ -64,13 +62,12 @@ function Profil() {
                     </div>
 
                     <TweetDetails />
+                    
                     <div className="smalldetails">
-                        <p>{dataProfilUser.details}</p>
+                        <p>{users[currentUser].details}</p>
                         <a href="#">Traduire la biographie.</a>
                     </div>
-
-                    <Biography />
-
+                    
                     <nav className="navListTweet">
                         <ul className="small-text">
                             <li>Posts </li>
@@ -79,28 +76,25 @@ function Profil() {
                             <li>Médias</li>
                             <li>J'aime</li>
                         </ul>
-                    </nav>
-
-                    <Tweets></Tweets>
+                    </nav>   
+                    <div className="tweets">
+                        {filteredTweets.map((filteredTweet) => (
+                            <Tweet key={filteredTweet.id} tweet={filteredTweet} /> 
+                        ))}
+                    </div> 
                 </div>
-
-
             </main>
-
-            <SidebarRight />
+            <Trends page="profil" />
+            
         </>
     )
 }
-
 
 function ProfilHeader({ style }) {
     return (
         <header style={style} className="ContenairImage">
 
-
-            <img src="src/images/profile-photo.png" alt="" />
-
-
+            <img src={users[currentUser].avatar} alt="" />
 
         </header>
     )
@@ -108,20 +102,19 @@ function ProfilHeader({ style }) {
 
 function TweetDetails() {
     return (
-        <div className="tweet-content-follow">
+        <div className="tweet-content-follow pl-6 mt-0">
 
             <div className="avatar-follow">
-                <img className="icons-home-fill" src="src/images/profile-photo.png" alt="" />
+                <img className="icons-home-fill" src={users[currentUser].avatar} alt="" />
             </div>
             <div className="tweet-details">
-                
-                <div className="tweet-title-follow"> <div>The New york city </div> < img src="src\images\Verified.png" alt="" /></div>
+                <div className="tweet-title-follow"> <div>{users[currentUser].name} </div><img src="src\images\Verified.png" alt="" /></div>
                 <p>@new time</p>
             </div>
+            <Biography />
         </div>
     )
 }
-
 
 function Biography() {
     return (
@@ -140,20 +133,6 @@ function Biography() {
         </div>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default Profil;
 

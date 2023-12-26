@@ -35,6 +35,10 @@ const [tweetAction, setTweetAction] = useState({
       url :prevState.isLiked ? urlretweet :urllikedRed,
       isLiked: !prevState.isLiked,
     }));
+    
+    console.log("like tweet : ", tweetAction.likes),
+      console.log("Voici ': ", tweetAction.isLiked)
+    console.log("Voici 'colorFill : ", tweetAction.colorFill)
   };
 
   return (

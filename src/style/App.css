@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* div{ */
-    /* border: 1px solid yellow */
-/* } */
+
+ /* div{ 
+border: 1px solid greenyellow
+}  */
 
 body{
     background-color: black !important;
@@ -115,6 +119,7 @@ display-flexx{
 }
 .tweet{
     display: flex;
+    align-self: stretch;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
@@ -144,6 +149,8 @@ display-flexx{
 .tweet-body{
     display: flex;
     flex-direction: column;
+    position: relative;
+    width: 100%;
     gap: .5rem;
 }
 .tweet-title{
