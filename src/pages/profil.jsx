@@ -7,38 +7,6 @@ import { TweetsContext } from "../App";
 import Tweet from "../components/Tweets/Tweet";
 import { currentUser } from "../components/Tweets/TweetAvatar";
 
-// const dataProfilUser = [
-//     {
-//         id: 1,
-//         name: "@CNN",
-//         imageBackground: 'url("src/images/profile-photo.png")',
-//         ProfilPhoto: "src/images/profile-photo.png",
-//         biographie: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate eum expedita debitis.",
-//         // lien: 
-
-//         // "It's our job to <a href="#">#GoThere</a> & tell the most difficult stories. For breaking news, follow <a href="#">@CNNBRK</a> and download our app <a href="#">cnn.com/apps</a> .",
-//         details: "It's our job to" + <a href="#">#GoThere</a> + "& tell the most difficult stories. For breaking news, follow" + <a href="#">@CNNBRK</a> + "and download our app" + <a href="#">cnn.com/apps</a>,
-//         // <a href="#">#GoThere</a>
-//         numberAbonnees: 1230,
-//         nombreDeTweets: 56789,
-//         nombreAbonnement: 2334
-//     },
-//     {
-//         id: 2,
-//         name: "@Deko Emmanuel",
-//         imageBackground: 'url("src/images/Emmanuel-Deko.jpg")',
-//         ProfilPhoto: "src/images/profile-photo.png",
-//         biographie: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate eum expedita debitis.",
-//         // lien: 
-//         // "It's our job to <a href="#">#GoThere</a> & tell the most difficult stories. For breaking news, follow <a href="#">@CNNBRK</a> and download
-//         details: "It's our job to" + <a href="#">#GoThere</a> + "& tell the most difficult stories. For breaking news, follow" + <a href="#">@CNNBRK</a> + "and download our app" + <a href="#">cnn.com/apps</a>,
-//         // <a href="#">#GoThere</a>
-//         numberAbonnees: 1230,
-//         nombreDeTweets: 56789,
-//         nombreAbonnement: 2334
-//     }
-//  ]
-
 function Profil() {
     const context2 = useContext(TweetsContext);
     const { filteredTweets } = context2; 
