@@ -65,39 +65,3 @@ export function TweetsProvider({ children }) {
 
 
 
-// import React, { createContext, useState } from "react";
-// import Home from "./pages/home.jsx";
-// import Layout from "./components/layout.jsx";
-// import Profil from "./pages/profil.jsx";
-// import Tweet from "./components/Tweets/Tweet.jsx";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// // ... other imports
-
-// export default function App() {
-//   const TweetsContext = createContext({
-//     filteredTweets: [],
-//     isTweetClick: false,
-//   });
-
-//   export function TweetsProvider({ children }) {
-//     const [filteredTweets, setFilteredTweets] = useState([]);
-//     const [isTweetClick, setIsTweetClick] = useState(false);
-
-//     return children; // Pass children to render within the context
-//   }
-
-//   return (
-//     <Layout>
-//       <BrowserRouter>
-//         <TweetsContext.Provider
-//           value={{ filteredTweets, setFilteredTweets, isTweetClick, setIsTweetClick }}
-//         >
-//           <Routes>
-//             <Route path="/" element={<Home />} />
-//             <Route path="/profil" element={<Profil />} />
-//           </Routes>
-//         </TweetsContext.Provider>
-//       </BrowserRouter>
-//     </Layout>
-//   );
-// }
