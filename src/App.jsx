@@ -29,14 +29,12 @@ export default function App() {
 
 export const TweetsContext = React.createContext({
   filteredTweets: [],
-  // dataTweets : dataTweets,
   isTweetClick: false,
 });
 
 export function TweetsProvider({ children }) {
   const [filteredTweets, setFilteredTweets] = useState([]);
   const [isTweetClick, setIsTweetClick] = useState(false);
-  // const [dataTweets, setDataTweets] = useState(dataTweets);
 
   return (
     <TweetsContext.Provider value={{ filteredTweets, setFilteredTweets, isTweetClick, setIsTweetClick }}>

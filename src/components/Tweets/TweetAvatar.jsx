@@ -24,7 +24,6 @@ export default function TweetAvatar({ tweet }) {
     };
 
 return (
-    // <div className="tweet-avatar">
         <div onClick={handleClick} className='tweet-avatar'>
             <img src={tweet.tweetAvatar} alt="" />
         </div>
