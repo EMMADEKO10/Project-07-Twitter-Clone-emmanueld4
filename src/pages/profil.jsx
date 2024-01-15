@@ -5,12 +5,13 @@ import { users } from "../Data-tweet/dataCompte";
 import { useContext } from "react";
 import { TweetsContext } from "../App";
 import Tweet from "../components/Tweets/Tweet";
-import { currentUser } from "../components/Tweets/TweetAvatar";
+// import { currentUser } from "../components/Tweets/TweetAvatar";
 
 function Profil() {
     const context2 = useContext(TweetsContext);
-    const { filteredTweets } = context2; 
-    console.log("DEKO : EXEPTIONS : ",users[currentUser]);
+    const { filteredTweets} = context2; 
+    const {currentAccount, currentUser} = context2;
+    console.log("currentAccount: " + currentAccount);
     return (
         <>
             <Sidebar />
@@ -59,6 +60,9 @@ function Profil() {
 }
 
 function ProfilHeader({ style }) {
+    const context2 = useContext(TweetsContext);
+    const { filteredTweets } = context2;
+    const { currentAccount, currentUser } = context2;
     return (
         <header style={style} className="ContenairImage">
 
@@ -69,6 +73,9 @@ function ProfilHeader({ style }) {
 }
 
 function TweetDetails() {
+    const context2 = useContext(TweetsContext);
+    const { filteredTweets } = context2;
+    const { currentAccount, currentUser } = context2;
     return (
         <div className="tweet-content-follow pl-6 mt-0">
 
@@ -85,6 +92,9 @@ function TweetDetails() {
 }
 
 function Biography() {
+    const context2 = useContext(TweetsContext);
+    const { filteredTweets } = context2;
+    const { currentAccount, currentUser } = context2;
     return (
         <div className="biography">
             <div className="flex-line">

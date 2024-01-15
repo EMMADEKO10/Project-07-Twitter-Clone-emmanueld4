@@ -43,10 +43,10 @@ const [tweetAction, setTweetAction] = useState({
 
   return (
     <div className="tweet-actions" >
-      <TweetAction colorFill={"#6E767D"} url={urlcommentaire} action={dataTweetAction.commentaire} />
-      <TweetAction colorFill={"#6E767D"} url={urllike} action={dataTweetAction.retweet} />
-      {<TweetAction colorFill={tweetAction.colorFill} url={tweetAction.url} action={tweetAction.likes} eventOfClick={incrementLike} />}
-      <TweetAction colorFill={"#6E767D"} url={urlrepley_tweet} url2={urlrepley_tweet2} />
+      <TweetAction className={"tweet-action action-tweet-effet"} colorFill={"#6E767D"} url={urlcommentaire} action={dataTweetAction.commentaire} />
+      <TweetAction className={"tweet-action action-tweet-retweet"} colorFill={"#6E767D"} url={urllike} action={dataTweetAction.retweet} />
+      {<TweetAction className={"tweet-action action-tweet-like" }colorFill={tweetAction.colorFill} url={tweetAction.url} action={tweetAction.likes} eventOfClick={incrementLike} />}
+      <TweetAction className={"tweet-action action-tweet-effet"} colorFill={"#6E767D"} url={urlrepley_tweet} url2={urlrepley_tweet2} />
     </div>
   );
 

@@ -3,9 +3,32 @@
 
 import { Button } from './tweet_editor/TweetEditorButtons';
 import { NavLink } from "react-router-dom";
+import { users } from "../Data-tweet/dataCompte";
+import { useContext } from "react";
+import { TweetsContext } from "../App";
+import { dataTweets } from '../Data-tweet/dataTweet';
 
 
-export default function Sidebar() {
+export default function Sidebar({tweet}) {
+
+    const context2 = useContext(TweetsContext);
+    const { filteredTweets, setFilteredTweets} = context2;
+    const { setCurrentAccount, setIsTweetClick }= context2;
+    const {currentUser,setCurrentUser }= context2;
+    
+    const handleClick = () => {
+        setIsTweetClick(prevState => !prevState);
+        setCurrentUser(0);
+        // Créer une copie de dataTweets avant de filtrer
+        let filteredTweets = dataTweets.slice(); 
+        const currentUserIdIndex = 0;
+        setCurrentUser(currentUserIdIndex);
+        filteredTweets = filteredTweets.filter((tweet) => tweet.user_id === users[currentUserIdIndex].id);
+
+        setFilteredTweets(filteredTweets);
+        
+    };
+
     return (
 
         <div className="sidebar">
@@ -19,7 +42,7 @@ export default function Sidebar() {
                     <li><Navigation logo={"src/images/image Page 2/Icons/Messages.svg"} titre="Messages" /></li>
                     <li> <Navigation logo={"src/images/image Page 2/Icons/Bookmarks.svg"} titre="Bookmarks" /></li>
                     <li><Navigation logo={"src/images/image Page 2/Icons/Lists.svg"} titre="Lists" /></li>
-                    <li><NavLink to='/Profil'><Navigation logo={"src/images/image Page 2/Icons/Profile.svg"} titre="Profils" /></NavLink></li>
+                    <li onClick={handleClick}><NavLink to='/Profil'><Navigation logo={"src/images/image Page 2/Icons/Profile.svg"} titre="Profils" /></NavLink></li>
                     <li><Navigation logo={"src/images/image Page 2/Icons/More.svg"} titre="More" /></li>
                 </ul>
                 <Button />
