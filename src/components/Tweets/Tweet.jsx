@@ -1,6 +1,8 @@
 import TweetAvatar from "./TweetAvatar";
 import TweetContent from "./TweetContent";
 import { NavLink } from 'react-router-dom'
+// import { TwiitContext } from "./Tweets";
+// import { useContext } from "react";
 
 export default function Tweet({tweet}) {
   return (

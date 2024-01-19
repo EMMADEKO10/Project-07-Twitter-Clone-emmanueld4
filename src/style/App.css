@@ -4,9 +4,9 @@
 @tailwind utilities;
 
 
-/* div{
+div{
 border: 1px solid greenyellow
-}  */
+} 
 
 body {
     background-color: black !important;

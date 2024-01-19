@@ -11,20 +11,29 @@ import { dataTweets } from '../Data-tweet/dataTweet';
 
 export default function Sidebar({tweet}) {
 
-    const context2 = useContext(TweetsContext);
-    const { filteredTweets, setFilteredTweets} = context2;
-    const { setCurrentAccount, setIsTweetClick }= context2;
-    const {currentUser,setCurrentUser }= context2;
-    
+    const { filteredTweets, setFilteredTweets } = useContext(TweetsContext);
+    const { dataTweet, setDataTweets } = useContext(TweetsContext);
+    const { setCurrentAccount, setIsTweetClick } = useContext(TweetsContext);
+    const { currentUser, setCurrentUser } = useContext(TweetsContext);
+    const { numberLike, setNumberLike } = useContext(TweetsContext);
+   
+//    -------------------------------------------------------------------------------------
+
     const handleClick = () => {
         setIsTweetClick(prevState => !prevState);
-        setCurrentUser(0);
+        setCurrentUser(1);
+        
+        for (let i = 0; i < dataTweet.length; i++){
+            dataTweet[i].dataTweetAction.like = isLikeClick ? 
+                (numberLike + 1, console.log("1er C AVATAR, True : ", numberLike + 1)) : 
+                (numberLike - 1, console.log("2er C AVATAR, false : ", numberLike))
+        }
+
         // Créer une copie de dataTweets avant de filtrer
         let filteredTweets = dataTweets.slice(); 
         const currentUserIdIndex = 0;
         setCurrentUser(currentUserIdIndex);
         filteredTweets = filteredTweets.filter((tweet) => tweet.user_id === users[currentUserIdIndex].id);
-
         setFilteredTweets(filteredTweets);
         
     };
@@ -54,8 +63,8 @@ export default function Sidebar({tweet}) {
 }
 
 function TitreProfilSidebar() {
+    
     return (
-
 
     <div>
         <div className="tweet-content-follow">
