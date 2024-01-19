@@ -3,11 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-div{
-border: 1px solid greenyellow
-} 
-
 body {
     background-color: black !important;
     margin: 0 auto;

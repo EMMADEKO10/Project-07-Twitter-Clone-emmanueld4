@@ -37,17 +37,12 @@ export default function TweetActions({ tweet }) {
     
     if (tweetAction.isLiked) {
       setNumberLike(tweetAction.likes)
-      console.log("Premiere conditon True :", tweetAction.likes );
-      // console.log("Premiere conditon :", tweetAction.likes );
     }else{
       setNumberLike(dataTweetAction.like)
-      console.log("Deuxieme conditon True :", dataTweetAction.like);
-      // console.log("Deuxieme conditon :", tweetAction.likes - 1);
     }
     
     dataTweetAction.isLike = !tweetAction.isLiked;
     setIsLikeClick(!tweetAction.isLiked);
-    // dataTweetAction.like.push(numberLike+1);
   };
 
   return (
