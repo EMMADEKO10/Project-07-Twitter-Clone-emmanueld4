@@ -1,6 +1,6 @@
 
 import { useState, useContext } from "react";
-import { TweetsContext } from '../../../App';
+import TweetsContext from "../../../context";
 import { dataTweets } from "../../../Data-tweet/dataTweet";
 
 export default function TweetAction({ tweet, url, action, eventOfClick, colorFill, className }) {

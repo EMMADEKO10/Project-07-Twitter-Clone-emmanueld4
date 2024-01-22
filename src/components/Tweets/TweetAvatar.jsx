@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TweetsContext } from "../../App";
+import TweetsContext from "../../context";
 import { dataTweets } from "../../Data-tweet/dataTweet";
 import { users } from "../../Data-tweet/dataCompte";
 
@@ -10,23 +10,12 @@ export default function TweetAvatar({ tweet }) {
     const { setCurrentAccount} = useContext(TweetsContext);
     const { currentUser, setCurrentUser } = useContext(TweetsContext);
     const { numberLike, setNumberLike } = useContext(TweetsContext);
-    const { dataTweetAction } = tweet
 
     let currentAccount = 0;
 
     const handleClick = () => {
 
-        if (isLikeClick) {
-            dataTweetAction.like = numberLike + 1;
-            // console.log("1er C AVATAR, True : ", numberLike + 1);
-        } else {
-            dataTweetAction.like = dataTweetAction.like;
-            // console.log("2er C AVATAR, false : ", dataTweetAction.like);
-        }
-            // console.log("C'est cliqué ? : ", isLikeClick);
-
-        let filteredTweets = dataTweet.slice();
-        
+        let filteredTweets = dataTweet.tweets.slice();
         const currentUserIdIndex = users.findIndex((user) => user.id === tweet.user_id);
         setCurrentUser(currentUserIdIndex);
         currentAccount = currentUserIdIndex;

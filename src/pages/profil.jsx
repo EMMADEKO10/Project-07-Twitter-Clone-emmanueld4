@@ -2,13 +2,16 @@ import Sidebar from "../components/sidebar"
 import Trends from "../components/trends";
 import { users } from "../Data-tweet/dataCompte";
 import { useContext } from "react";
-import { TweetsContext } from "../App";
+import TweetsContext from "../context";
 import Tweet from "../components/Tweets/Tweet";
+import { useParams } from "react-router-dom";
 
 function Profil() {
     
     const { filteredTweets } = useContext(TweetsContext);;
     const { currentAccount, currentUser } = useContext(TweetsContext);
+    const { id } = useParams();
+    console.log("Profil : ", users[currentUser].name);
     
     return (
         <>
@@ -16,12 +19,13 @@ function Profil() {
             <main className='main'>
 
                 <div className="timeline">
+                    
                     <ProfilHeader style={{ backgroundImage: users[currentUser].imageBackground }} />
 
                     <div>
                         <div className="profil-navigation">
                             <ul>
-                                <li><img src="src/images/image Page 2/Icons/More.svg" alt="" /></li>
+                                <li><img src="/images/image Page 2/Icons/More.svg" alt="" /></li>
                                 <li><button className="btnWhiteTweet">Follow</button></li>
                             </ul>
                         </div>
@@ -78,7 +82,7 @@ function TweetDetails() {
                 <img className="icons-home-fill" src={users[currentUser].avatar} alt="" />
             </div>
             <div className="tweet-details">
-                <div className="tweet-title-follow"> <div>{users[currentUser].name} </div><img src="src\images\Verified.png" alt="" /></div>
+                <div className="tweet-title-follow"> <div>{users[currentUser].name} </div><img src="\images\Verified.png" alt="" /></div>
                 <p>@new time</p>
             </div>
             <Biography />

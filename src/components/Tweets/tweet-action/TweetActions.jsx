@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import TweetAction from './TweetAction';
 import { useContext, useEffect } from 'react';
-import { TweetsContext } from '../../../App';
+import TweetsContext from '../../../context';
+
 
 
 export default function TweetActions({ tweet }) {
@@ -11,45 +12,34 @@ export default function TweetActions({ tweet }) {
   const urlrepley_tweet = "M21.6083 13.225L17.4417 9.05834C17.1975 8.81417 16.8017 8.81417 16.5583 9.05834L12.3917 13.225C12.1467 13.4692 12.1467 13.865 12.3917 14.1083C12.6367 14.3517 13.0308 14.3533 13.275 14.1083L16.375 11.0083V19.5C16.375 19.845 16.655 20.125 17 20.125C17.345 20.125 17.625 19.845 17.625 19.5V11.0083L20.725 14.1083C20.8467 14.2308 21.0067 14.2917 21.1667 14.2917C21.3267 14.2917 21.4867 14.2317 21.6083 14.1083C21.8525 13.8642 21.8525 13.4692 21.6083 13.225Z"
   const urlrepley_tweet2 = "M23.4233 25.2867H10.5767C9.52334 25.2867 8.66667 24.43 8.66667 23.3767V18.6667C8.66667 18.3217 8.94667 18.0417 9.29167 18.0417C9.63667 18.0417 9.91667 18.3217 9.91667 18.6667V23.3767C9.91667 23.7408 10.2125 24.0367 10.5767 24.0367H23.4233C23.7875 24.0367 24.0833 23.7408 24.0833 23.3767V18.6667C24.0833 18.3217 24.3633 18.0417 24.7083 18.0417C25.0533 18.0417 25.3333 18.3217 25.3333 18.6667V23.3767C25.3333 24.43 24.4767 25.2867 23.4233 25.2867Z"
   const urllikedRed = "M9.49895 19C13.3967 17.2256 16.2176 14.1965 17.7392 11.1294C19.2374 8.07497 19.4481 5.0332 18.1138 3.20814C16.9082 1.57318 15.3397 0.952155 13.7478 1.00285C12.156 1.05355 10.6109 1.80132 9.49895 2.85326C8.38698 1.80132 6.84194 1.05355 5.25007 1.00285C3.6582 0.952155 2.08975 1.57318 0.884141 3.20814C-0.450218 5.0332 -0.23953 8.07497 1.28211 11.1294C2.78033 14.1965 5.60122 17.2256 9.49895 19Z"
-  
+  let iconColor = "#6E767D"
+  // let urlLike = "urlretweet"
   const { isLikeClick, setIsLikeClick } = useContext(TweetsContext);
-  const { numberLike, setNumberLike } = useContext(TweetsContext);
+  const {dataTweet, setDataTweets} = useContext(TweetsContext);
   
-  const { dataTweetAction } = tweet;
   
-  const [tweetAction, setTweetAction] = useState({
-    likes: dataTweetAction.like,
-    commentaires: dataTweetAction.commentaires,
-    retweets: dataTweetAction.retweets,
-    colorFill: "#6E767D",
-    url: urlretweet,
-    isLiked: isLikeClick,
-  });
+  // console.log(tweet.like)
  
   const incrementLike = () => {
-    setTweetAction(prevState => ({
-      ...prevState,
-      likes: prevState.isLiked ? prevState.likes - 1 : prevState.likes + 1,
-      colorFill: prevState.isLiked ? "#6E767D" : "#FF0000",
-      url: prevState.isLiked ? urlretweet : urllikedRed,
-      isLiked: !prevState.isLiked,
-    }));
+   
+    const upDateData = [...dataTweet.tweets]
+    const tweetIndex = upDateData.findIndex((item) => item.id === tweet.id);
+    upDateData[tweetIndex].islike = !upDateData[tweetIndex].islike;
+    upDateData[tweetIndex].like = upDateData[tweetIndex].islike ? tweet.like + 1:tweet.like - 1 
+    upDateData[tweetIndex].urlretweet = upDateData[tweetIndex].islike ? urllikedRed : urlretweet
+    upDateData[tweetIndex].urllikedRed = upDateData[tweetIndex].islike ? "#f11313":"#6E767D"
+    setDataTweets({...dataTweet, tweets: upDateData})
     
-    if (tweetAction.isLiked) {
-      setNumberLike(tweetAction.likes)
-    }else{
-      setNumberLike(dataTweetAction.like)
-    }
+    // console.log("Urlretweet : ",upDateData[tweetIndex].urlretweet)
+    console.log(" urlikedRed : ",upDateData[tweetIndex].urllikedRed)
     
-    dataTweetAction.isLike = !tweetAction.isLiked;
-    setIsLikeClick(!tweetAction.isLiked);
   };
 
   return (
     <div className="tweet-actions" >
-      <TweetAction className={"tweet-action action-tweet-effet"} colorFill={"#6E767D"} url={urlcommentaire} action={dataTweetAction.commentaire} tweet={tweet} />
-      <TweetAction className={"tweet-action action-tweet-retweet"} colorFill={"#6E767D"} url={urllike} action={dataTweetAction.retweet} tweet={tweet} />
-      {<TweetAction className={"tweet-action action-tweet-like"} colorFill={tweetAction.colorFill} IsLikedInc={tweetAction.isLiked} url={tweetAction.url} action={tweetAction.likes} eventOfClick={incrementLike} tweet={tweet} />}
+      <TweetAction className={"tweet-action action-tweet-effet"} colorFill={"#6E767D"} url={urlcommentaire} action={tweet.commentaire} tweet={tweet} />
+      <TweetAction className={"tweet-action action-tweet-retweet"} colorFill={"#6E767D"} url={urllike} action={tweet.retweet} tweet={tweet} />
+      {<TweetAction className={"tweet-action action-tweet-like"} colorFill={tweet.urllikedRed} IsLikedInc={tweet.isLiked} url={tweet.urlretweet} action={tweet.like} eventOfClick={incrementLike} tweet={tweet} />}
       <TweetAction className={"tweet-action action-tweet-effet"} colorFill={"#6E767D"} url={urlrepley_tweet} url2={urlrepley_tweet2} tweet={tweet} />    
     </div>
   );

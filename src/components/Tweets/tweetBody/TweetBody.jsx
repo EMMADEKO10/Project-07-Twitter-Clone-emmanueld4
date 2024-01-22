@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TweetsContext } from "../../../App";
+import TweetsContext from "../../../context";
 import TweetTitle from "./tweet-title"
 import TweetText from './tweet-Text'
 
