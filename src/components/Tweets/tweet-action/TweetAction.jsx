@@ -1,7 +1,5 @@
 
 import { useState, useContext } from "react";
-import TweetsContext from "../../../context";
-import { dataTweets } from "../../../Data-tweet/dataTweet";
 
 export default function TweetAction({ tweet, url, action, eventOfClick, colorFill, className }) {
 
@@ -15,7 +13,6 @@ export default function TweetAction({ tweet, url, action, eventOfClick, colorFil
     const handleMouseLeave = () => {
         setHovered(false);
     };
-    // ------------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------------------------------------
     return (
 
@@ -26,9 +23,7 @@ export default function TweetAction({ tweet, url, action, eventOfClick, colorFil
                     <path d={url} fill={isHovered ? (url === urlretweet || url === urllikedRed ? "red" : "rgba(29, 155, 240, 1)") : colorFill}
                         onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
                 </svg>
-
             </div>
-
             <span>
                 {action}
             </span>

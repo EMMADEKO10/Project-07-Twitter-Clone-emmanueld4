@@ -53,7 +53,7 @@
             "like": 482
         },
         {
-            "id": "4",
+            "id": 4,
             "user_id": 4,
             "content": "BIG NEWS lol jk still Twitter",
             "tweetTitle": "Twitter",
@@ -69,7 +69,7 @@
             "isLike": "false"
         },
         {
-            "id": "5",
+            "id": 5,
             "user_id": 4,
             "content": "hello literally everyone",
             "tweetTitle": "Twitter",
@@ -85,7 +85,7 @@
             "isLike": "false"
         },
         {
-            "id": "6",
+            "id": 6,
             "user_id": 4,
             "content": "hello literally everyone",
             "tweetTitle": "Twitter",
@@ -103,7 +103,7 @@
             "logoActionDownloard": "/images/Tweet-Replies.svg"
         },
         {
-            "id": "7",
+            "id": 7,
             "user_id": 5,
             "content": "Mes Services",
             "tweetTitle": "@Deko Emmanuel . ",
@@ -121,9 +121,9 @@
             "logoActionDownloard": "/images/Tweet-Replies.svg"
         }
     ],
-    "current-user": [
+    "currentUser": [
         {
-            "id": "1",
+            "id": 1,
             "name": "Bradley Ortiz",
             "avatar": "/images/profile-photo.png",
             "imageBackground": "url(\"/images/image Page 2/atlanta-04-mai-cnn-center-atlanta-04-mai-2013-cnn-center-est-siege-mondial_1002979-7554.jpg\")",
@@ -137,7 +137,7 @@
             "nombreAbonnement": "2334"
         },
         {
-            "id": "2",
+            "id": 2,
             "name": "CNN",
             "avatar": "/images/image Page 2/businessman-reading-daily-news.jpg",
             "imageBackground": "url(\"/images/image Page 2/atlanta-04-mai-cnn-center-atlanta-04-mai-2013-cnn-center-est-siege-mondial_1002979-7554.jpg\")",
@@ -151,7 +151,7 @@
             "nombreAbonnement": "2334"
         },
         {
-            "id": "3",
+            "id": 3,
             "name": "The New York Times",
             "avatar": "/images/Profile-Photo-new-york.png",
             "imageBackground": "url(\"/images/image Page 2/cnn-remporte-top-food-nourriture-saine-typique-indonesienne-souvent-appelee-gado-gado-lotek-se-compose-divers-legumes-oeufs-tempeh-lontong-sauce-aux-arachides-cuisine-rue_954783-671.jpg\")",
@@ -165,7 +165,7 @@
             "verified": true
         },
         {
-            "id": "4",
+            "id": 4,
             "name": "Twitter",
             "avatar": "/images/logo-rond-twitter-1536x1536.png",
             "imageBackground": "url(\"/images/image Page 2/cnn-remporte-top-food-nourriture-saine-typique-indonesienne-souvent-appelee-gado-gado-lotek-se-compose-divers-legumes-oeufs-tempeh-lontong-sauce-aux-arachides-cuisine-rue_954783-671.jpg\")",
@@ -176,7 +176,7 @@
             "details": "It's our job to #GoThere & tell the most difficult stories. For breaking news, follow @CNNBRK and download our app cnn.com/apps"
         },
         {
-            "id": "5",
+            "id": 5,
             "name": "DEKO Emmanuel",
             "avatar": "/images/Mes photos /1000280517.jpg",
             "imageBackground": "url(\"/images/Mes photos /Emmanuel-Deko.jpg\")",

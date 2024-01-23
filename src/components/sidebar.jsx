@@ -3,17 +3,15 @@
 
 import { Button } from './tweet_editor/TweetEditorButtons';
 import { NavLink } from "react-router-dom";
-import { users } from "../Data-tweet/dataCompte";
+// import { users } from "../Data-tweet/dataCompte";
 import { useContext } from "react";
 import TweetsContext from '../context';
-import { dataTweets } from '../Data-tweet/dataTweet';
 
-
-export default function Sidebar({tweet}) {
+export default function Sidebar() {
 
     const { filteredTweets, setFilteredTweets } = useContext(TweetsContext);
     const { dataTweet, setDataTweets } = useContext(TweetsContext);
-    const profilePath = `/profil/${encodeURIComponent(users[1].name)}`; 
+    const profilePath = `/profil/${encodeURIComponent(dataTweet.currentUser[1].name)}`; 
 //    -------------------------------------------------------------------------------------
 
     const handleClick = () => {

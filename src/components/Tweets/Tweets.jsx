@@ -1,8 +1,6 @@
 import { React, useContext, useState } from "react";
 import Tweet from "./Tweet";
-// import { dataTweets } from "../../Data-tweet/dataTweet";
 import TweetsContext from "../../context";
-import data from "../../data/initial-data.json";
 
 function Tweets() {
   const { dataTweet, setDataTweets } = useContext(TweetsContext);

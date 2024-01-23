@@ -1,6 +1,6 @@
 import Sidebar from "../components/sidebar"
 import Trends from "../components/trends";
-import { users } from "../Data-tweet/dataCompte";
+// import { users } from "../Data-tweet/dataCompte";
 import { useContext } from "react";
 import TweetsContext from "../context";
 import Tweet from "../components/Tweets/Tweet";
@@ -10,8 +10,8 @@ function Profil() {
     
     const { filteredTweets } = useContext(TweetsContext);;
     const { currentAccount, currentUser } = useContext(TweetsContext);
+    const { dataTweet, setDataTweets } = useContext(TweetsContext);
     const { id } = useParams();
-    console.log("Profil : ", users[currentUser].name);
     
     return (
         <>
@@ -20,7 +20,7 @@ function Profil() {
 
                 <div className="timeline">
                     
-                    <ProfilHeader style={{ backgroundImage: users[currentUser].imageBackground }} />
+                    <ProfilHeader style={{ backgroundImage: dataTweet.currentUser[currentUser].imageBackground }} />
 
                     <div>
                         <div className="profil-navigation">
@@ -34,7 +34,7 @@ function Profil() {
                     <TweetDetails />
 
                     <div className="smalldetails">
-                        <p>{users[currentUser].details}</p>
+                        <p>{dataTweet.currentUser[currentUser].details}</p>
                         <a href="#">Traduire la biographie.</a>
                     </div>
 
@@ -63,26 +63,27 @@ function Profil() {
 }
 
 function ProfilHeader({ style }) {
-    
+    const { dataTweet, setDataTweets } = useContext(TweetsContext);
     const { filteredTweets } = useContext(TweetsContext);
     const { currentAccount, currentUser } = useContext(TweetsContext);
     return (
         <header style={style} className="ContenairImage">
-            <img src={users[currentUser].avatar} alt="" />
+            <img src={dataTweet.currentUser[currentUser].avatar} alt="" />
         </header>
     )
 }
 
 function TweetDetails() {
+    const { dataTweet, setDataTweets } = useContext(TweetsContext);
     const { currentAccount, currentUser } = useContext(TweetsContext);
     return (
         <div className="tweet-content-follow pl-6 mt-0">
 
             <div className="avatar-follow">
-                <img className="icons-home-fill" src={users[currentUser].avatar} alt="" />
+                <img className="icons-home-fill" src={dataTweet.currentUser[currentUser].avatar} alt="" />
             </div>
             <div className="tweet-details">
-                <div className="tweet-title-follow"> <div>{users[currentUser].name} </div><img src="\images\Verified.png" alt="" /></div>
+                <div className="tweet-title-follow"> <div>{dataTweet.currentUser[currentUser].name} </div><img src="\images\Verified.png" alt="" /></div>
                 <p>@new time</p>
             </div>
             <Biography />

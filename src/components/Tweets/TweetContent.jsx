@@ -3,7 +3,7 @@ import TweetActions from "./tweet-action/TweetActions"
 
 export default function TweetContent({ tweet }) {
     return (
-        <div className="tweet-content">
+        <div className="flex flex-col items-start justify-start gap-30 w-full">
             <TweetBody tweet={tweet} />
             <TweetActions tweet={tweet} />
         </div>
