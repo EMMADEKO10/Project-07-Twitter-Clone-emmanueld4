@@ -20,7 +20,7 @@ export default function TweetActions({ tweet }) {
     upDateData[tweetIndex].islike = !upDateData[tweetIndex].islike;
     upDateData[tweetIndex].like = upDateData[tweetIndex].islike ? tweet.like + 1:tweet.like - 1 
     upDateData[tweetIndex].urlretweet = upDateData[tweetIndex].islike ? urllikedRed : urlretweet
-    upDateData[tweetIndex].urllikedRed = upDateData[tweetIndex].islike ? "#f11313":"#6E767D"
+    upDateData[tweetIndex].urllikedRed = upDateData[tweetIndex].islike ? "#e24660":"#6E767D"
     setDataTweets({...dataTweet, tweets: upDateData})
     
   };

@@ -22,19 +22,19 @@ function ItemInFooter({ dtaItem }) {
             <div className="flex flex-grow items-center justify-center">
                 <div className="flex items-center self-stretch py-0.5 pr-3" >
                     <a  className="flex flex-grow justify-center self-stretch">
-                        {/* Terms of Service */}
+                    
                         {dtaItem[1]}
                     </a>
                 </div>
                 <div className="flex items-center self-stretch py-0.5 pr-3">
                     <a  className="flex flex-grow justify-center self-stretch">
-                        {/* Privacy Policy */}
+                       
                         {dtaItem[2]}
                     </a>
                 </div>
                 <div className="flex items-center self-stretch py-0.5 pr-3">
                     <a  className="flex flex-grow justify-center self-stretch">
-                        {/* Cookie Cooky*/}
+                       
                         {dtaItem[3]}
                     </a>
                 </div>

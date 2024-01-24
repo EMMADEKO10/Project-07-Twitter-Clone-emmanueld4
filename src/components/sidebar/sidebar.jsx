@@ -1,25 +1,25 @@
 
 // Ce fichier contient plusieurs composant.
 
-import { Button } from './tweet_editor/TweetEditorButtons';
+import { Button } from '../TimeLine/tweet_editor/TweetEditorButtons';
 import { NavLink } from "react-router-dom";
 // import { users } from "../Data-tweet/dataCompte";
 import { useContext } from "react";
-import TweetsContext from '../context';
+import TweetsContext from '../../context';
 
 export default function Sidebar() {
 
     const { filteredTweets, setFilteredTweets } = useContext(TweetsContext);
     const { dataTweet, setDataTweets } = useContext(TweetsContext);
-    const profilePath = `/profil/${encodeURIComponent(dataTweet.currentUser[1].name)}`; 
-//    -------------------------------------------------------------------------------------
+    const profilePath = `/profil/${encodeURIComponent(dataTweet.currentUser[1].name)}`;
+    //    -------------------------------------------------------------------------------------
 
     const handleClick = () => {
-    
-        let filteredTweets = dataTweet.tweets.slice(); 
-        filteredTweets = filteredTweets.filter((tweet) => tweet.user_id ===1);
+
+        let filteredTweets = dataTweet.tweets.slice();
+        filteredTweets = filteredTweets.filter((tweet) => tweet.user_id === 1);
         setFilteredTweets(filteredTweets);
-        
+
     };
 
     return (
@@ -47,21 +47,23 @@ export default function Sidebar() {
 }
 
 function TitreProfilSidebar() {
-    
+
     return (
 
-    <div>
-        <div className="tweet-content-follow">
-            <div className="avatar-follow">
-            <img className="icons-home-fill" src="/images/profile-photo.png" alt="" />
+        <div className='mt-20' >
+            <div className="flex items-center gap-10">
+                <div className="flex items-center justify-center p-0 m-0">
+                    <div>
+                        <img className="size-10 icons-home-fill" src="/images/profile-photo.png" alt="" />
+                    </div>
+                    <div className="flex-col items-center justify-center tweet-details">
+                        <div className="tweet-title-follow"> <div>Bradley Ortiz </div> < img src="\images\image Page 2\Icons\Market_Pri.png" alt="" /></div>
+                        <p>@Bradley_</p>
+                    </div>
+                </div>
+                <span><img src="\images\image Page 2\Icons\3point.png" alt="" /></span>
             </div>
-            <div className="tweet-details">
-                <div className="tweet-title-follow"> <div>Bradley Ortiz </div> < img src="\images\image Page 2\Icons\Market_Pri.png" alt="" /></div>
-                <p>@Bradley_</p>
-            </div>
-            <span><img src="\images\image Page 2\Icons\3point.png" alt="" /></span>
         </div>
-    </div>
     )
 }
 

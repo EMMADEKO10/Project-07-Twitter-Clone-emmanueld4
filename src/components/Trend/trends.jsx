@@ -1,6 +1,6 @@
 import TrendingList from "./trendingList";
 import FollowList from "./followList";
-import TwitterFooter from "./TwitterFooter";
+import TwitterFooter from "../TimeLine/TwitterFooter";
 
 export default function Trends(page) {
 

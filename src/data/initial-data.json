@@ -139,7 +139,7 @@
         {
             "id": 2,
             "name": "CNN",
-            "avatar": "/images/image Page 2/businessman-reading-daily-news.jpg",
+            "avatar": "/images/tweet-profile-photo.png",
             "imageBackground": "url(\"/images/image Page 2/atlanta-04-mai-cnn-center-atlanta-04-mai-2013-cnn-center-est-siege-mondial_1002979-7554.jpg\")",
             "bio": "CNN biography  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate eum expedita debitis.",
             "createdAt": "new Date()",

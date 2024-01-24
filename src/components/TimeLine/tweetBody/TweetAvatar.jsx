@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import TweetsContext from "../../context";
-// import { users } from "../../Data-tweet/dataCompte";
+import TweetsContext from "../../../context";
+
 
 export default function TweetAvatar({ tweet }) {
     const { setFilteredTweets, setIsTweetClick} = useContext(TweetsContext);
@@ -24,7 +24,7 @@ export default function TweetAvatar({ tweet }) {
     };
 
 return (
-    <div onClick={handleClick} className="w-20 h-20 cursor-pointer">
+    <div onClick={handleClick} className="w-17 h-17 cursor-pointer">
         <img className="w-full h-full rounded-full" src={tweet.tweetAvatar} alt="" />
         </div>
    

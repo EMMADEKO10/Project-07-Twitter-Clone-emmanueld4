@@ -2,6 +2,7 @@ import { React, useContext, useState } from "react";
 import Tweet from "./Tweet";
 import TweetsContext from "../../context";
 
+
 function Tweets() {
   const { dataTweet, setDataTweets } = useContext(TweetsContext);
  
@@ -9,7 +10,7 @@ function Tweets() {
     <div className="tweets">
      
       {dataTweet.tweets.map((tweet) => (  
-         < Tweet key = {tweet.id} tweet = { tweet } /> 
+          < Tweet key={tweet.id} tweet={tweet} /> 
          ))}  
     </div>
   );

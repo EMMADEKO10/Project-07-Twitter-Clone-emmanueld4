@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import TweetsContext from "../../context";
-
+import TweetsContext from "../../../context";
 
 export default function TweetEditorButtons({ setvalueInputText, valueInputText }) {
 
@@ -12,36 +11,14 @@ export default function TweetEditorButtons({ setvalueInputText, valueInputText }
     );
 }
 function TweetEditorActions() {
-
     const { addTweetFile, setAddTweetFile } = useContext(TweetsContext);
-
-    // function handleFileChange(event) {
-
-    //     const selectedFile = event.target.files[0];
-    //     const reader =new FileReader()
-    //     reader.onload = (e) => {
-    //         setAddTweetFile(e.target.result)
-    //     };
-
-    //     reader.readAsDataURL(selectedFile)
-    //     console.log(addTweetFile);
-
-    //     console.log("Voici le select file : ", selectedFile);
-
-    // }
-    function setAddTweetFileEvent(event, setAddTweetFile) {
+    function handleFileChange(event) {
         const selectedFile = event.target.files[0];
-        console.log("file : ", selectedFile);
-        if (selectedFile) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                setAddTweetFile(e.target.result);
-            };
-            reader.readAsDataURL(selectedFile);
-            console.log("Voici le select file : ", selectedFile);
-        } else {
-            console.log("Aucun fichier sélectionné");
-        }
+        const reader = new FileReader()
+        reader.onload = (e) => {
+            setAddTweetFile(e.target.result)
+        };  
+        reader.readAsDataURL(selectedFile)
     }
 
     return (
@@ -55,7 +32,7 @@ function TweetEditorActions() {
                     id="1"
                     hidden
                     accept="image/*"
-                    onChange={setAddTweetFileEvent}
+                    onChange={handleFileChange}
                 />
             </label>
             <img src="src\images\Gif.svg" alt="" />
@@ -66,20 +43,24 @@ function TweetEditorActions() {
     );
 }
 export function Button({ setvalueInputText, valueInputText }) {
-
     const { dataTweet, setDataTweets } = useContext(TweetsContext);
     const { addTweetFile, setAddTweetFile } = useContext(TweetsContext);
-    const inputtextnew = valueInputText;
-    // -----------------------------------------------------------------------------------
+    let inputtextnew = valueInputText;
+    var tweetImage = document.getElementById('tweetImage'); 
+    var tweetText = document.getElementById('tweetInput');
+    // -----------------------------------------------------------------------------------------
+    function updateInput(inputtextnew) {
+        inputtextnew = "";
+        tweetText.value = "";
+    }
     function handleAddTweet() {
-        // const now = Date.now();
         const now = new Date();
         const seconds = now.getSeconds();
         const second = seconds < 100 ? 'instant' : seconds;
-        setAddTweetFile(addTweetFile);
-        if (addTweetFile){
+
+        if (addTweetFile) {
             setAddTweetFile(addTweetFile);
-        }else{
+        } else {
             setAddTweetFile("");
         }
         const newTweet = {
@@ -88,9 +69,9 @@ export function Button({ setvalueInputText, valueInputText }) {
             "tweetTitle": 'Bradley Ortiz', // Vous pouvez personnaliser le titre
             "tweetAvatar": '/images/profile-photo.png', // Définissez l'avatar si nécessaire
             "tweetTitleAuthor": '@Bradley Ortiz . ',
-            "tweetTitleDetails": second, // Personnalisez les détails du titre
+            "tweetTitleDetails": second, 
             "content": inputtextnew,
-            "tweetImage": addTweetFile,
+            // "tweetImage": addTweetFile,
             "createdAt": seconds < 100 ? 'instant' : seconds,
             "tweetId": 0,
             "commentaire": 0,
@@ -101,14 +82,17 @@ export function Button({ setvalueInputText, valueInputText }) {
             "isLike": "false"
         }
 
-        console.log("Nouveau Tweet en Action : ", newTweet.createdAt);
-        // console.log("Nouveau Tweet en Action : ", dataTwitter);
-        // ------------------------
-        const updatedTweets = [...dataTweet.tweets];
-        updatedTweets.unshift(newTweet);
-
-        // Mettez à jour le contexte avec les nouveaux tweets
-        setDataTweets({ ...dataTweet, tweets: updatedTweets })
+    // ----------------------------------------------------------------------------------------------------
+        if (tweetText.value) {
+            const updatedTweets = [...dataTweet.tweets];
+            updatedTweets.unshift(newTweet);
+    // Mettez à jour le contexte avec les nouveaux tweets--------------------------------------------------
+            setDataTweets({ ...dataTweet, tweets: updatedTweets })
+           
+        }
+        updateInput(tweetText);
+        setAddTweetFile("");
+        inputtextnew ="";
     };
 
     return (

@@ -20,7 +20,7 @@ export default function TweetAction({ tweet, url, action, eventOfClick, colorFil
             <div className="action-content">
 
                 <svg onClick={eventOfClick} width="55" height="75" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d={url} fill={isHovered ? (url === urlretweet || url === urllikedRed ? "red" : "rgba(29, 155, 240, 1)") : colorFill}
+                    <path d={url} fill={isHovered ? (url === urlretweet || url === urllikedRed ? "#e24660" : "rgba(29, 155, 240, 1)") : colorFill}
                         onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
                 </svg>
             </div>
