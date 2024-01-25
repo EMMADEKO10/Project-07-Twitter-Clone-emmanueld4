@@ -30,8 +30,8 @@ export default function Sidebar() {
 
     return (
 
-        <div className="sidebar">
-            <div className='sidebarNav pl-10'>
+        <div className="sidebar pl-10">
+            <div className='sidebarNav'>
 
                 <ul>
                     <li><Navigation logo={"/images/image Page 2/Icons/Twitter.png"} titre="" /></li>
