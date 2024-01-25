@@ -10,13 +10,19 @@ import TweetsContext from '../../context';
 export default function Sidebar() {
 
     const { filteredTweets, setFilteredTweets } = useContext(TweetsContext);
-    const { dataTweet, setDataTweets } = useContext(TweetsContext);
-    const profilePath = `/profil/${encodeURIComponent(dataTweet.currentUser[1].name)}`;
+    const { currentAccount, setCurrentAccount } = useContext(TweetsContext);
+    const { currentUser, setCurrentUser } = useContext(TweetsContext);
+    const { Data, setData} = useContext(TweetsContext);
+    const profilePath = `/profil/${encodeURIComponent(Data.currentUser[0].name)}`;
     //    -------------------------------------------------------------------------------------
 
     const handleClick = () => {
 
-        let filteredTweets = dataTweet.tweets.slice();
+        let filteredTweets = Data.tweets.slice();
+        const currentUserIdIndex = Data.currentUser.findIndex((user) => user.id === 1);
+        setCurrentUser(currentUserIdIndex);
+        // currentAccount = currentUserIdIndex;
+        setCurrentAccount(currentAccount);
         filteredTweets = filteredTweets.filter((tweet) => tweet.user_id === 1);
         setFilteredTweets(filteredTweets);
 
@@ -25,7 +31,7 @@ export default function Sidebar() {
     return (
 
         <div className="sidebar">
-            <div className='sidebarNav'>
+            <div className='sidebarNav pl-10'>
 
                 <ul>
                     <li><Navigation logo={"/images/image Page 2/Icons/Twitter.png"} titre="" /></li>

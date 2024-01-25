@@ -10,7 +10,7 @@ function Profil() {
 
     const { filteredTweets } = useContext(TweetsContext);;
     const { currentAccount, currentUser } = useContext(TweetsContext);
-    const { dataTweet, setDataTweets } = useContext(TweetsContext);
+    const { Data, setData } = useContext(TweetsContext);
     const { id } = useParams();
 
     return (
@@ -24,7 +24,7 @@ function Profil() {
                         <NavLink to='/'><img className="size-xl" src="/images/arrow-left-solid (3).svg" alt="Retour" /></NavLink>
                         <div className="flex-col justify-start items-start gap-2 ">
                             <div className="flex justify-start items-start gap-2 text-base font-[700]">
-                                {dataTweet.tweets[currentUser].tweetTitle}
+                                {Data.tweets[currentUser].tweetTitle}
                                 <img className="w-6 h-auto" src="/images/Verified.png" alt="" />
                             </div>
                             <div className="font-[400] text-gray-600">
@@ -32,7 +32,7 @@ function Profil() {
                             </div>
                         </div>
                     </div>
-                    <ProfilHeader style={{ backgroundImage: dataTweet.currentUser[currentUser].imageBackground }} />
+                    <ProfilHeader style={{ backgroundImage: Data.currentUser[currentUser].imageBackground }} />
 
                     <div>
                         <div className="profil-navigation">
@@ -71,23 +71,23 @@ function Profil() {
 }
 
 function ProfilHeader({ style }) {
-    const { dataTweet } = useContext(TweetsContext);
+    const { Data } = useContext(TweetsContext);
     const { currentUser } = useContext(TweetsContext);
     return (
         <header style={style} className="ContenairImage">
-            <div className="ContenairImage"><img className="" src={dataTweet.currentUser[currentUser].avatar} alt="" /></div>
+            <div className="ContenairImage"><img className="" src={Data.currentUser[currentUser].avatar} alt="" /></div>
         </header>
     )
 }
 
 function TweetDetails() {
-    const { dataTweet } = useContext(TweetsContext);
+    const { Data } = useContext(TweetsContext);
     const { currentUser } = useContext(TweetsContext);
     return (
         <div className="tweet-content-follow pl-6 mt-0">
             <div className="tweet-details">
                 <div className="tweet-title-follow flex">
-                    <div className="text-[23] text-base font-[700]">{dataTweet.currentUser[currentUser].name} </div>
+                    <div className="text-[23] text-base font-[700]">{Data.currentUser[currentUser].name} </div>
                     <img src="\images\Verified.png" alt="" /></div>
                 <p>@new time</p>
             </div>
@@ -97,12 +97,12 @@ function TweetDetails() {
 }
 
 function Biography() {
-    const { dataTweet, setDataTweets } = useContext(TweetsContext);
+    const { Data, setData } = useContext(TweetsContext);
     const { currentAccount, currentUser } = useContext(TweetsContext);
     return (
         <div className="biography">
             <div className="flex-line">
-                <a href="#">{dataTweet.currentUser[currentUser].name}.com</a>
+                <a href="#">{Data.currentUser[currentUser].name}.com</a>
                 <p className="small-text">A rejoint Twitter en fevrier 2007</p>
             </div>
             <div className="flex-line">

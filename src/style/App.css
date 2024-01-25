@@ -24,10 +24,11 @@ display-flexx {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding-right: 20px;
 }
 
 .timeline {
-    flex: 0 0 700px;
+    flex: 0 0 600px;
     font-family: 'Inter', sans-serif;
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
@@ -448,7 +449,7 @@ div{
     position: absolute;
     top: 50%;
     left: 30%;
-    transform: translate(-180%, -5%);
+    transform: translate(-170%, -5%);
     z-index: 1;
 }
 

@@ -11,18 +11,17 @@ export default function TweetActions({ tweet }) {
   const urlrepley_tweet2 = "M23.4233 25.2867H10.5767C9.52334 25.2867 8.66667 24.43 8.66667 23.3767V18.6667C8.66667 18.3217 8.94667 18.0417 9.29167 18.0417C9.63667 18.0417 9.91667 18.3217 9.91667 18.6667V23.3767C9.91667 23.7408 10.2125 24.0367 10.5767 24.0367H23.4233C23.7875 24.0367 24.0833 23.7408 24.0833 23.3767V18.6667C24.0833 18.3217 24.3633 18.0417 24.7083 18.0417C25.0533 18.0417 25.3333 18.3217 25.3333 18.6667V23.3767C25.3333 24.43 24.4767 25.2867 23.4233 25.2867Z"
   const urllikedRed = "M9.49895 19C13.3967 17.2256 16.2176 14.1965 17.7392 11.1294C19.2374 8.07497 19.4481 5.0332 18.1138 3.20814C16.9082 1.57318 15.3397 0.952155 13.7478 1.00285C12.156 1.05355 10.6109 1.80132 9.49895 2.85326C8.38698 1.80132 6.84194 1.05355 5.25007 1.00285C3.6582 0.952155 2.08975 1.57318 0.884141 3.20814C-0.450218 5.0332 -0.23953 8.07497 1.28211 11.1294C2.78033 14.1965 5.60122 17.2256 9.49895 19Z"
  
-  const {dataTweet, setDataTweets} = useContext(TweetsContext);
+  const {Data, setData} = useContext(TweetsContext);
  
   const incrementLike = () => {
    
-    const upDateData = [...dataTweet.tweets]
+    const upDateData = [...Data.tweets]
     const tweetIndex = upDateData.findIndex((item) => item.id === tweet.id);
     upDateData[tweetIndex].islike = !upDateData[tweetIndex].islike;
     upDateData[tweetIndex].like = upDateData[tweetIndex].islike ? tweet.like + 1:tweet.like - 1 
     upDateData[tweetIndex].urlretweet = upDateData[tweetIndex].islike ? urllikedRed : urlretweet
     upDateData[tweetIndex].urllikedRed = upDateData[tweetIndex].islike ? "#e24660":"#6E767D"
-    setDataTweets({...dataTweet, tweets: upDateData})
-    
+    setData({...Data, tweets: upDateData})  
   };
 
   return (

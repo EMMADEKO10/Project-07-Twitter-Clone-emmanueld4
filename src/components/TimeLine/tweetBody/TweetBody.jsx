@@ -6,8 +6,6 @@ import TweetText from './tweet-Text'
 
 export default function TweetBody({ tweet }) {
    
-    const { dataTweet} = useContext(TweetsContext);
-
     return (
         // Tweet-body
         <div className="flex flex-col relative w-full gap-2">

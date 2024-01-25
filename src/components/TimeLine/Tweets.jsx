@@ -4,12 +4,12 @@ import TweetsContext from "../../context";
 
 
 function Tweets() {
-  const { dataTweet, setDataTweets } = useContext(TweetsContext);
+  const { Data, setData } = useContext(TweetsContext);
  
   return (
     <div className="tweets">
      
-      {dataTweet.tweets.map((tweet) => (  
+      {Data.tweets.map((tweet) => (  
           < Tweet key={tweet.id} tweet={tweet} /> 
          ))}  
     </div>

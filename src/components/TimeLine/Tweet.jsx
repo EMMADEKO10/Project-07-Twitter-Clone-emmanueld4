@@ -6,13 +6,13 @@ import TweetAvatar from "./tweetBody/TweetAvatar";
 
 export default function Tweet({ tweet }) {
   const { currentUser, setCurrentUser } = useContext(TweetsContext);
-  const { dataTweet, setDataTweets } = useContext(TweetsContext);
+  const { Data, setData } = useContext(TweetsContext);
   // Fonction pour gérer le clic sur le TweetAvatar
   const handleTweetAvatarClick = (username) => {
     // Utilisez la valeur (username) comme nécessaire
     setCurrentUser(username);
   };
-  const profilePath = `/profil/${encodeURIComponent(dataTweet.currentUser[currentUser].name)}`; 
+  const profilePath = `/profil/${encodeURIComponent(Data.currentUser[currentUser].name)}`; 
 
   return (
     <div className="flex self-stretch justify-start items-start gap-4 p-3 border-b border-solid border-gray-700">

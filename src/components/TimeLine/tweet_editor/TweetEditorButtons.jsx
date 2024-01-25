@@ -43,10 +43,10 @@ function TweetEditorActions() {
     );
 }
 export function Button({ setvalueInputText, valueInputText }) {
-    const { dataTweet, setDataTweets } = useContext(TweetsContext);
+    const { Data, setData } = useContext(TweetsContext);
     const { addTweetFile, setAddTweetFile } = useContext(TweetsContext);
     let inputtextnew = valueInputText;
-    var tweetImage = document.getElementById('tweetImage'); 
+    // var tweetImage = document.getElementById('tweetImage'); 
     var tweetText = document.getElementById('tweetInput');
     // -----------------------------------------------------------------------------------------
     function updateInput(inputtextnew) {
@@ -64,7 +64,7 @@ export function Button({ setvalueInputText, valueInputText }) {
             setAddTweetFile("");
         }
         const newTweet = {
-            "id": dataTweet.tweets.length + 1, // Générer un nouvel identifiant unique
+            "id": Data.tweets.length + 1, // Générer un nouvel identifiant unique
             "user_id": 1, // Utiliser le premier utilisateur par défaut
             "tweetTitle": 'Bradley Ortiz', // Vous pouvez personnaliser le titre
             "tweetAvatar": '/images/profile-photo.png', // Définissez l'avatar si nécessaire
@@ -84,10 +84,10 @@ export function Button({ setvalueInputText, valueInputText }) {
 
     // ----------------------------------------------------------------------------------------------------
         if (tweetText.value) {
-            const updatedTweets = [...dataTweet.tweets];
+            const updatedTweets = [...Data.tweets];
             updatedTweets.unshift(newTweet);
     // Mettez à jour le contexte avec les nouveaux tweets--------------------------------------------------
-            setDataTweets({ ...dataTweet, tweets: updatedTweets })
+            setData({ ...Data, tweets: updatedTweets })
            
         }
         updateInput(tweetText);

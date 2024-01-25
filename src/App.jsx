@@ -10,7 +10,7 @@ import TweetsContext from "./context.js";
 // ___________________________------------------------_________________________________________________________________
 
 export default function App() {
-  const [dataTweet, setDataTweets] = useState(data);
+  const [Data, setData] = useState(data);
   const [filteredTweets, setFilteredTweets] = useState([]);
   const [isTweetClick, setIsTweetClick] = useState(false);
   const [isLikeClick, setIsLikeClick] = useState(false);
@@ -24,8 +24,8 @@ export default function App() {
       <BrowserRouter>
         <TweetsContext.Provider value={{
           filteredTweets, setFilteredTweets, isTweetClick, setIsTweetClick,
-          currentAccount, setCurrentAccount, currentUser, setCurrentUser, dataTweet,
-          setDataTweets, isLikeClick, setIsLikeClick, addTweetFile, 
+          currentAccount, setCurrentAccount, currentUser, setCurrentUser, Data,
+          setData, isLikeClick, setIsLikeClick, addTweetFile, 
           isButtonTweetClick, setIsButtonTweetClick, setAddTweetFile }}>
           <Routes>
             <Route path='/' element={<Home />} />
