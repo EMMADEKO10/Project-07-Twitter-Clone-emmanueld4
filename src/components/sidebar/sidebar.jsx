@@ -3,7 +3,6 @@
 
 import { Button } from '../TimeLine/tweet_editor/TweetEditorButtons';
 import { NavLink } from "react-router-dom";
-// import { users } from "../Data-tweet/dataCompte";
 import { useContext } from "react";
 import TweetsContext from '../../context';
 
