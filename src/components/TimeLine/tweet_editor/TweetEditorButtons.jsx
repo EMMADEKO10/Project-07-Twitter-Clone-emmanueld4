@@ -46,7 +46,7 @@ export function Button({ setvalueInputText, valueInputText }) {
     const { Data, setData } = useContext(TweetsContext);
     const { addTweetFile, setAddTweetFile } = useContext(TweetsContext);
     let inputtextnew = valueInputText;
-    // var tweetImage = document.getElementById('tweetImage'); 
+    var tweetImage = document.getElementById('tweetImage'); 
     var tweetText = document.getElementById('tweetInput');
     // -----------------------------------------------------------------------------------------
     function updateInput(inputtextnew) {
@@ -71,7 +71,7 @@ export function Button({ setvalueInputText, valueInputText }) {
             "tweetTitleAuthor": '@Bradley Ortiz . ',
             "tweetTitleDetails": second, 
             "content": inputtextnew,
-            // "tweetImage": addTweetFile,
+            "tweetImage": addTweetFile,
             "createdAt": seconds < 100 ? 'instant' : seconds,
             "tweetId": 0,
             "commentaire": 0,
